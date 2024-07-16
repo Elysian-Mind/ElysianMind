@@ -7,7 +7,7 @@ import '../../Components/About/About.css'
 
 function About() {
   return (
-    <div className='about-us'>
+    <div className='about-us' id='about'>
         <div className="row">
             <div className="column">
                 <div className="about-text">

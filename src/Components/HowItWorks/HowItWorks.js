@@ -7,7 +7,7 @@ import breakout from '../Assets/breakoutroom.png'
 
 function HowItWorks() {
   return (
-    <div className='howitworks'>
+    <div className='howitworks' id='howitworks'>
         <h1>How it Works</h1>
         {/* <p>Here are some few steps to help you out with the web application</p> */}
         <div className="how-it-works">

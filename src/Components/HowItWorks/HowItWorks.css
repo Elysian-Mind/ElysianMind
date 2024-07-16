@@ -91,6 +91,9 @@
     border-radius: 40px;
     background-color: #5598AF;
 }
+.howitworks button:hover{
+    background-color: #E6CB4F;
+}
 
 .card:hover {
     animation: transform 1s ease-in-out infinite;

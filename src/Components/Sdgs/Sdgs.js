@@ -5,7 +5,7 @@ import sdg8 from '../Assets/sdg8.png'
 
 function Sdgs() {
   return (
-    <div className='sdg'>
+    <div className='sdg' id='sdg'>
         {/* <h1>SGDS</h1>
         <p></p> */}
         <h1>KEY SDGs :</h1>
