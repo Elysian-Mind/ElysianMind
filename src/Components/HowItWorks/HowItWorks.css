@@ -1,0 +1,110 @@
+.howitworks h1{
+    font-size: 60px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    margin-top: 200px;
+    color: #5598AF;
+}
+.howitworks p{
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    margin-top: 15px;
+}
+
+.how-it-works {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 3em 0 3em 0;
+    margin-top: 20px;
+
+}
+.how-it-works .card img{
+    border-radius: 0;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 20px;
+    align-self: flex-start;
+    margin: auto;
+    display: flex;
+}
+.how-it-works .card{
+    /* background-color: #E6CB4F; */
+    height: 400px;
+    width: 300px;
+    background-color: transparent;
+    align-items: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em;
+    box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.how-it-works h4{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    color: black;
+    color: #5598AF;
+    /* gap: 0.1em; */
+    font-size: 1.5em;
+}
+.how-it-works p{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25em;
+    font-size: 1em;
+
+}
+.howitworks button{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    padding: 5px;
+    width: 300px;
+    height: 70px;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: black;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    background-color: #5598AF;
+}
+
+.card:hover {
+    animation: transform 1s ease-in-out infinite;
+}
+
+@keyframes transform {
+  
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
