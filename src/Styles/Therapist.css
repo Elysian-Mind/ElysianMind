@@ -1,0 +1,72 @@
+.therapist h1{
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    font-size: 40px;
+
+}
+.therapist p{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    max-width: 700px;
+    font-size: 25px;
+    margin-top: 50px;
+
+}
+.therapist{
+    width: 100%;
+    height: 400vh;
+}
+
+.therapist .flip-card {
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  .therapist .flip-card img{
+    width: 100%;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .therapist .flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .therapist .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .therapist .flip-card-front, .flip-card-back {
+    position: absolute;
+   
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .therapist .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .therapist .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
