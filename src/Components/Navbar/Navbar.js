@@ -20,6 +20,7 @@ function Navbar() {
       <Link activeClass='active' to='contact' spy = {true} smooth={true} offset={-100} duration={500} className="desktopMenuListItem">Contact Us</Link>
       <Link activeClass='active' to='intro' spy = {true} smooth={true} offset={-100} duration={500} className="desktopMenuListItem"></Link>
 </div>
+<Link to="/therapist" className="desktopMenuListItem">Our Therapist</Link>
 
 <button className="desktopMenuBtn" onClick={ () =>{ 
     var imageElement = document.getElementsByClassName('contactForm1');
