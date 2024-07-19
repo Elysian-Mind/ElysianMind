@@ -126,4 +126,4 @@ if __name__ == "__main__":
     # Simulate user input
     user_input = input("You: ")
     response = handle_user_input(user_input)
-    print(f"Elisian: {response}")
+    print(f"Elysian: {response}")
