@@ -5,6 +5,7 @@ import HealingOutlinedIcon from '@mui/icons-material/HealingOutlined';
 import SpaOutlinedIcon from '@mui/icons-material/SpaOutlined';
 import PatientImg from '../../src/Components/Assets/patient.jpeg'
 import SouthOutlinedIcon from '@mui/icons-material/SouthOutlined';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import '../Styles/Patients.css'
 
 const Patients = () => {
@@ -19,26 +20,26 @@ const Patients = () => {
 
   return (
     <div className='patient'>
-        <div id='patient-section'>
-            <div className="row">
-                <div className="column">
-                    <div className="patient-text">
-                        <h1>Our Patient</h1>
-                        <p>At Elysian Mind Care, we are dedicated to empowering you on your path to wellness. 
-                            We work collaboratively with our patients to understand their unique needs and concerns. 
-                            Whether you're seeking guidance for a specific condition, managing ongoing health concerns, 
-                            or simply looking to improve your overall well-being, 
-                            we provide a comprehensive range of services and resources to support you every step of the way.</p>
-                            <button> Learn More <SouthOutlinedIcon /> </button>
+            <div id='patient-section'>
+                <div className="row">
+                    <div className="column">
+                        <div className="patient-text">
+                            <h1>Our Patient</h1>
+                            <p>At Elysian Mind Care, we are dedicated to empowering you on your path to wellness. 
+                                We work collaboratively with our patients to understand their unique needs and concerns. 
+                                Whether you're seeking guidance for a specific condition, managing ongoing health concerns, 
+                                or simply looking to improve your overall well-being, 
+                                we provide a comprehensive range of services and resources to support you every step of the way.</p>
+                                <button> Learn More <SouthOutlinedIcon /> </button>
+
+                        </div>
 
                     </div>
 
+                <div className="column">
+                <img src={PatientImg} alt="" />
                 </div>
-
-            <div className="column">
-            <img src={PatientImg} alt="" />
             </div>
-        </div>
              <h1 className='explore'>EXPLORE MORE</h1>
 
 
@@ -67,6 +68,22 @@ const Patients = () => {
                     </div>
 
                 </div>
+                <h1 className='ai-doc'>Chat With Our AI Therapist </h1>
+                <div className="chatbot">
+                  <div className="container">
+                  <AccountCircleIcon /> 
+                    <h1>AI Therapist</h1>
+                    <div className="chat-box">
+                        <div className="chat-history">
+                        </div>
+                        <div className="message-input">
+                            <input type="text" id='user-mmessage' placeholder='Talk to me I am here for you'/>
+                            <button id='send-button'> Send</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <p>Unsatisfied see a Therapist instead here</p>
 
 
                            

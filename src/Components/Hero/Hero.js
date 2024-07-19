@@ -8,7 +8,7 @@ function Hero() {
         <img src={heroImage} alt="" className='heroimage'/>
         <div className="herotext">
             <h1> Elysian <br/><span>Mind</span></h1>
-             <p className="tagline"> Connect,Heal,<span>Grow</span></p>
+             <p className="tagline" id='tagline'> Connect,Heal,<span>Grow</span></p>
         </div>
        
     </div>

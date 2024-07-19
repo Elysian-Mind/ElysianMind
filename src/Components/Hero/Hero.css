@@ -26,10 +26,10 @@
 .herotext h1 span{
     color:#E6CB4F ;
 }
-.herotext p .tagline{
+#home .herotext p {
     font-size: 60px;
     font-weight: 100;
 }
-.herotext p .tagline span{
+#home .herotext p span{
     color: #E6CB4F;
 }
