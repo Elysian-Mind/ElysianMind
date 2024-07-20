@@ -1,0 +1,35 @@
+
+.container img{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+
+}
+.container .herotext{
+    position: absolute;
+    bottom:0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+.herotext h1{
+    margin-top: 20%;
+    font-size: 200px;
+}
+.herotext h1 span{
+    color:#E6CB4F ;
+}
+#home .herotext p {
+    font-size: 60px;
+    font-weight: 100;
+}
+#home .herotext p span{
+    color: #E6CB4F;
+}

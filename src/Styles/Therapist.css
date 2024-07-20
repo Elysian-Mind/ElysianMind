@@ -1,0 +1,80 @@
+.therapist h1{
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    font-size: 40px;
+
+}
+.therapist p{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    max-width: 700px;
+    font-size: 25px;
+    margin-top: 50px;
+
+}
+.therapist{
+    width: 100%;
+    height: 400vh;
+}
+
+.therapist-card .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+}
+
+.therapist-card .card img{
+  width: 80%;
+}
+.therapist-card h1{
+  margin-top: 10px;
+}
+.therapist-card .title {
+  color: grey;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.therapist-card p{
+  margin-top: 20px;
+}
+.therapist-card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.therapist-card a i svg{
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  /* margin-left: 10px; */
+}
+.therapist-card .card .icons{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+
+.therapist-card button:hover, a:hover {
+  opacity: 0.7;
+}

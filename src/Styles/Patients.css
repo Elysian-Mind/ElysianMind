@@ -1,0 +1,246 @@
+.patient{
+    width: 100%;
+}
+
+
+.patient .column{
+    float: left;
+    width: 50%;
+    padding: 40px;
+}
+.patient .row{
+    display: flex;
+    content: "";
+    clear: both;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.row .column img{
+    width: 80%;
+    border-radius: 200px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+.column .patient-text{
+    max-width: 500px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 25px;
+
+}
+.column .patient-text h1{
+    color: #df3c22;
+    margin-bottom: 50px;
+}
+.column .patient-text button{
+    font-size: 25px;
+    font-weight: bolder;
+    height: 60px;
+    width: 300px;
+    border-radius: 50px;
+    background-color: #df3c22;
+    color: white;
+    border: none;
+    margin-top: 30px;
+}
+.column .patient-text button svg{
+    font-weight: bolder;
+}
+
+.column .patient-text button:hover{
+    background-color: #5598af;
+}
+.patient img{
+    width: 80%;
+    height: 600px;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+}
+.explore {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 150px;
+    color: #df3c22;
+}
+.about-patients{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    padding: 3em 0 3em 0;
+    margin-top: 20px;
+
+}
+
+.patient .about-patients  .card{
+    height: 150px;
+    width: 350px;
+    margin-top: 10px;
+    /* float: left; */
+    margin: auto;
+    background-color: transparent;
+    align-items: center;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em;
+    box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    cursor: pointer;
+    flex-direction: column;
+    padding: 1em;
+   
+}
+
+.card svg{
+    color: #df3c22;
+    font-size: 30px;
+    float: left;
+    align-items: start;
+    margin-right: 30px;
+    display: flex;
+}
+.card .container h4{
+    margin-top: 5px;
+    color: #df3c22;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+.card .container button{
+    background-color: #df3c22;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+}
+.card .container button:hover{
+    background-color: #5598af;
+}
+.ai-doc{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 50px;
+    color: #df3c22;
+}
+
+.chatbot {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 30vh;
+}
+.chatbot .container{
+    background-color:#df3c22;
+    width: 500px;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.chatbot h1{
+    margin-bottom: 30px;
+    color: white;
+
+}
+.chatbot .container svg{
+    font-size: 50px;
+    color: white;
+    /* margin-top: 40px; */
+}
+
+.chatbot .chat-box{
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    /* overflow-y: scroll; */
+    height: 200px;
+    /* border: none; */
+
+}
+.chatbot .chat-history{
+    /* margin-bottom:500px; */
+}
+.chatbot .chat-history p{
+    margin: 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    clear: both;
+
+}
+.chatbox .user-message{
+    background-color: #ddd;
+
+}
+.chatbox .bot-message{
+    background-color: #f0f8ff;
+
+}
+.chatbot .message-input{
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 150px;
+    /* margin-bottom: 10px; */
+}
+.chatbot ::-webkit-input-placeholder{
+    margin: 10px;
+}
+.chatbot .message-input input{
+    /* background-color:#df3c22; */
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    height: 60px;
+}
+/* .chatbot #user-message{
+    flex: 1;
+    background-color: #4CAF50;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+} */
+.chatbot #send-button{
+    padding: 10px 20px;
+    background-color:#df3c22;
+    width: 200px;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.chatbot #send-button:hover{
+    background-color: #5598af;
+}
