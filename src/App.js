@@ -16,6 +16,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path='/therapist' element={<Therapist />} />
             <Route path='/patient' element={ <Patients />} />
+            
 
         </Routes>
         
@@ -26,7 +27,6 @@ function App() {
     </div>
   );
 }
-
 
 
 export default App;

@@ -6,7 +6,6 @@ import '../Styles/Therapist.css'
 import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
-
 const Therapists = () => {
 
   useEffect(() => {
@@ -31,30 +30,6 @@ const Therapists = () => {
 
       </div>
       <div className="therapist-card">
-        <div class="card">
-          <img src={FemaleTherapist} alt="" />
-          <h1>John Doe</h1>
-          <p class="title">CEO & Founder, Example</p>
-          <p>Harvard University</p>
-          <div className="icons">
-            <a href=""><i><XIcon /></i></a>
-            <a href=""><i><LinkedInIcon /></i></a>
-            <a href=""><i><FacebookIcon /></i></a>
-          </div>
-            <p><button>Contact</button></p>
-        </div>
-        <div class="card">
-          <img src={FemaleTherapist} alt="" />
-          <h1>John Doe</h1>
-          <p class="title">CEO & Founder, Example</p>
-          <p>Harvard University</p>
-          <div className="icons">
-            <a href=""><i><XIcon /></i></a>
-            <a href=""><i><LinkedInIcon /></i></a>
-            <a href=""><i><FacebookIcon /></i></a>
-          </div>
-            <p><button>Contact</button></p>
-        </div>
         <div class="card">
           <img src={FemaleTherapist} alt="" />
           <h1>John Doe</h1>
