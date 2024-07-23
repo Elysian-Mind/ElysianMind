@@ -107,9 +107,21 @@ session_state["conversation"] = get_conversation_chain(vectorstore)
 
 @app.route('/chat', methods=['POST'])
 def chat():
-    user_input = request.json.get('message')
-    response = handle_user_input(user_input)
-    return jsonify({'response': response})
+    if not request.is_json:
+        return jsonify({'error': 'Request must be JSON'}), 400
+    
+    data = request.get_json()
+    print(f"Received JSON data: {data}")
+    
+    user_input = data.get('message')
+    
+    if user_input:
+        print(f"Received message: {user_input}")
+        response = handle_user_input(user_input)
+        print(f"Generated response: {response}")
+        return jsonify({'response': response})
+    else:
+        return jsonify({'error': 'No message provided'}), 400
 
 @app.route('/')
 def index():
@@ -117,3 +129,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
