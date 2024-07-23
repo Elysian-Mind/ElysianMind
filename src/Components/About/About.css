@@ -13,7 +13,7 @@
 
 }
 
-.row .column img{
+.about-us .row .column img{
     width: 80%;
     border-radius: 200px;
     text-align: center;
@@ -21,7 +21,7 @@
     margin: auto;
     align-items: center;
 }
-.column .about-text{
+.about-us .column .about-text{
     max-width: 500px;
     text-align: center;
     align-items: center;

@@ -7,6 +7,8 @@ import PatientImg from '../../src/Components/Assets/patient.jpeg'
 import SouthOutlinedIcon from '@mui/icons-material/SouthOutlined';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import '../Styles/Patients.css'
+import { Link } from 'react-router-dom';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
 
 const Patients = () => {
 
@@ -68,22 +70,8 @@ const Patients = () => {
                     </div>
 
                 </div>
-                <h1 className='ai-doc'>Chat With Our AI Therapist </h1>
-                <div className="chatbot">
-                  <div className="container">
-                  <AccountCircleIcon /> 
-                    <h1>AI Therapist</h1>
-                    <div className="chat-box">
-                        <div className="chat-history">
-                        </div>
-                        <div className="message-input">
-                            <input type="text" id='user-mmessage' placeholder='Talk to me I am here for you'/>
-                            <button id='send-button'> Send</button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <p>Unsatisfied see a Therapist instead here</p>
+               
+                <Link to="/chatbot" className='customLink'><button id='chatbot-button'> <SmartToyIcon /> Chatbot</button></Link>
 
 
                            
