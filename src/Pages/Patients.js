@@ -5,32 +5,10 @@ import HealingOutlinedIcon from '@mui/icons-material/HealingOutlined';
 import SpaOutlinedIcon from '@mui/icons-material/SpaOutlined';
 import PatientImg from '../../src/Components/Assets/patient.jpeg';
 import SouthOutlinedIcon from '@mui/icons-material/SouthOutlined';
-import '../Styles/Patients.css';
-
-// Dummy scroller function as a placeholder
-const scroller = {
-  scrollTo: (id, options) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: options.smooth ? 'smooth' : 'auto',
-      block: 'start'
-    });
-  }
-};
-
-const Patients = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
-
-  useEffect(() => {
-    scroller.scrollTo('patient-section', {
-      duration: 500,
-      delay: 0,
-      smooth: 'easeInOutQuart'
-    });
-  }, []);
-
-  const navigateToAI = () => {
-    navigate('/ai-patient'); // Navigate to AI page
-  };
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import '../Styles/Patients.css'
+import { Link } from 'react-router-dom';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
 
   return (
     <div className='patient'>
@@ -46,11 +24,37 @@ const Patients = () => {
                 we provide a comprehensive range of services and resources to support you every step of the way.</p>
               <button> Learn More <SouthOutlinedIcon /> </button>
             </div>
-          </div>
-          <div className="column">
-            <img src={PatientImg} alt="" />
-          </div>
-        </div>
+    
+             <h1 className='explore'>EXPLORE MORE</h1>
+
+
+                <div className="about-patients">
+                    <div className="card">
+                        <div className="container">
+                        <h4> <ConnectWithoutContactOutlinedIcon />Connect</h4>
+                        <p>Get to connect with other patients anonymously</p>
+                        <button>Create Room</button>
+
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="container">
+                            <h4> <HealingOutlinedIcon />Heal</h4>
+                            <p>Talk to a therapist of your choice and get to heal</p>
+                            <button>Contact a Therapist</button>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="container">
+                            <h4><SpaOutlinedIcon />Grow </h4>
+                            <p>Grow mentally at your own pace with resources</p>
+                            <button>Review Resources</button>
+                        </div>
+                    </div>
+
+                </div>
+               
+                <Link to="/chatbot" className='customLink'><button id='chatbot-button'> <SmartToyIcon /> Chatbot</button></Link>
 
         <h1 className='explore'>EXPLORE MORE</h1>
 

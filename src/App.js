@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import Footer from './Components/Footer/Footer';
 import Therapist from './Pages/Therapist';
 import Patients from './Pages/Patients';
-import AIPatient from './Pages/AIPatient';
+import Chatbot from './Pages/Chatbot';
 
 function App() {
   return (
@@ -13,10 +13,12 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path='/therapist' element={<Therapist />} />
-          <Route path='/patient' element={<Patients />} />
-          <Route path='/ai-patient' element={<AIPatient />} />
+
+            <Route path="/home" element={<Home />} />
+            <Route path='/therapist' element={<Therapist />} />
+            <Route path='/patient' element={ <Patients />} />
+            <Route path='/chatbot' element={ <Chatbot />} />
+  
         </Routes>
         <Footer />
       </Router>
