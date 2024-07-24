@@ -10,8 +10,10 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 import functools
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load environment variables
 load_dotenv()
@@ -129,4 +131,3 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
