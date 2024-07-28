@@ -125,3 +125,17 @@ Link .desktopMenuListItem{
     }
     
 }
+@media screen and (max-width: 1500px) {
+    .mobMenu{
+        display: flex;
+    }
+    .desktopMenu{
+        display: none;
+    }
+    .desktopMenuBtn{
+        display: none;
+
+    }
+   
+    
+}
