@@ -1,164 +1,128 @@
-.main-div{
+.main-div {
     background-color: #5598AF;
-    height: 100%;
-    width: 100%;
-    margin-bottom: -98px;
-}
-
-.main-div{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-}
-.main-div .container{
+  }
+  
+  .container {
     height: 550px;
     max-width: 390px;
-    /* overflow-x: hidden; */
-    overflow-x:hidden;
-
-    /* width: 100%; */
-
-    border: 3px solid rgba(255, 255, 255, .5);
+    border: 3px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     background: white;
-    /* overflow-y: scroll; */
-    z-index: 100px;
-    overflow-y: auto;
-    /* overflow-y: inherit; */
-    position: relative;
-}
-
-.main-div .container .top-part{
-    top: 2.5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-part {
     height: 100px;
     background: #236277;
     display: flex;
     align-items: center;
-    position: sticky;
-    z-index: 100;
-    /* position: fixed; */
-    justify-content:space-around;
-}
-
-.container .top-part svg{
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .top-part svg {
     font-size: 40px;
     color: #E6CB4F;
-    margin-right: 50px;
     cursor: pointer;
-}
-.main-div .top-part .agent-details{
+  }
+  
+  .agent-details {
     display: flex;
     align-items: center;
-    /* margin: auto; */
-    justify-content: center;
-    
-
-}
-.main-div .top-part .agent-details img{
-    width: 15%;
+  }
+  
+  .agent-details img {
+    width: 50px;
+    height: 50px;
     border: 2px solid white;
     border-radius: 50%;
-    background-color: white;
-    margin-top: 10px;
-}
-.top-part .agent-text{
-    margin-left: 10px;
-}
-.agent-text h3{
+  }
+  
+  .agent-text h3 {
     font-size: 15px;
-}
-.main-div .agent-text p{
-    font-size:11px ;
-}
-.main-div .agent-text span{
+  }
+  
+  .agent-text p {
+    font-size: 11px;
+  }
+  
+  .agent-text span {
     color: #E6CB4F;
-}
-.main-div .chart-section{
-    position: relative;
-}
-.main-div .chart-section .left-part{
-    margin: 60px 0;
-    /* width: 100%; */
-    max-width: 260px;
-    /* position: absolute; */
-
-}
-.main-div .left-part .agent-chart{
+  }
+  
+  .chat-section {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
     display: flex;
-    align-items: center;
-
-}
-.main-div .left-part img{
-    width: 15%;
-    background: black;
-    border-radius: 50%;
-}
-
-.main-div .chart-section .left-part p{
-    color: black;
-    /* height: 30px; */
-    /* width: 300px; */
-    font-weight: lighter;
-    font-size: 15px;
-    background: #75c2db;
+    flex-direction: column;
+  }
+  
+  .message-container {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .message-container.assistant {
+    justify-content: flex-start;
+  }
+  
+  .message-container.user {
+    justify-content: flex-end;
+  }
+  
+  .message {
+    max-width: 70%;
     border-radius: 10px;
     padding: 10px;
-    margin-left: 10px;
-}
-.main-div .bottom-section{
-    position: sticky;
-    margin-top: 50px;
-    bottom: 3px;
-    height: 45px;
+    word-wrap: break-word;
+  }
+  
+  .message.user {
+    background-color: #236277;
+    color: white;
+  }
+  
+  .message.assistant {
+    background-color: grey;
+    color: white;
+  }
+  
+  .bottom-section {
+    height: 60px;
     background: #236277;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    border-top: 2px solid #236277;
-    padding: 10px;
-
-}
-
-.main-div .bottom-section textarea {
+    padding: 0 10px;
+    border-radius: 20px;
+  }
+  
+  .bottom-section textarea {
+    flex: 1;
+    height: 40px;
     background: #236277;
-    /* border-radius: 20px; */
-    height: 30px;
-    color: black;
-    padding: 0 5px;
-    width: 80%;
+    color: white;
+    border: none;
     resize: none;
     outline: none;
-    border: none;
-    text-transform: capitalize;
-
-}
-.main-div textarea ::placeholder{
-    color: white;
-    font-weight: lighter;
-}
-.main-div .bottom-section svg{
-    color: #E6CB4F;
-    font-size: 30px;
-
-}
-.chart-section{
-    position: relative;
     padding: 10px;
-}
-.chart-section .right-part{
-    margin: -50px 0;
-    text-align: right;
-    float: right;
-    max-width: 260px 0;
-
-}
-.chart-section .right-part p {
+  }
+  
+  .bottom-section textarea::placeholder {
     color: white;
-    margin-bottom: 10px;
-    background: black;
-    padding: 8px 24px;
-    border-radius: 10px;
-}
-
+  }
+  
+  .bottom-section svg {
+    font-size: 30px;
+    color: #E6CB4F;
+    cursor: pointer;
+  }
+  
