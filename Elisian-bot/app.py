@@ -97,12 +97,11 @@ except Exception as e:
 
 def handle_user_input(user_input):
     try:
-        # Invoke the retrieval chain with the user input
         response = retrieval_chain.invoke({"input": user_input})
-        # The response is likely a dictionary, so we need to extract the actual answer
         return response.get('answer', 'No answer found')
     except Exception as e:
-        raise ValueError(f"Error handling user input: {e}")
+        print(f"Original error: {str(e)}")
+        raise ValueError(f"Error handling user input: {str(e)}")
 
 
 @app.route('/chat', methods=['POST'])
