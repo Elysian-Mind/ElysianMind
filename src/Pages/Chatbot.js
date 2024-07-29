@@ -53,6 +53,9 @@ const Chatbot = () => {
               </div>
             ))}
           </div>
+          <div className="right-part">
+            <p>Hello</p>
+          </div>
           <div className="bottom-section">
             <CameraAltIcon />
             <textarea
@@ -64,7 +67,6 @@ const Chatbot = () => {
           </div>
         </div>
       </div>
-      <p>Unsatisfied? See a therapist instead <a href="/therapist">here</a></p>
     </div>
   );
 };
