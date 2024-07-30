@@ -14,6 +14,7 @@ function Navbar() {
         <img src={logo} alt="logo" className="logo" />
       </Link>
          <div className="desktopMenu">
+            
          <ScrollLink
                activeClass="active"
                to="home"
@@ -107,7 +108,9 @@ function Navbar() {
             className="navMenu"
             style={{ display: showMenu ? "flex" : "none" }}
          >
-            <ScrollLink
+         <Link activeClass="active" to="/home" className="listItem">Home</Link>
+
+            {/* <ScrollLink
                activeClass="active"
                to="home"
                spy={true}
@@ -118,7 +121,7 @@ function Navbar() {
                onClick={() => setShowMenu(false)}
             >
                Home
-            </ScrollLink>
+            </ScrollLink> */}
             <ScrollLink
                activeClass="active"
                to="about"
@@ -143,18 +146,10 @@ function Navbar() {
             >
                Resources
             </ScrollLink>
-            <ScrollLink
-               activeClass="active"
-               to="projects"
-               spy={true}
-               smooth={true}
-               offset={-50}
-               duration={500}
-               className="listItem"
-               onClick={() => setShowMenu(false)}
-            >
-               Our Therapists
-            </ScrollLink>
+          
+            <Link activeClass="active" to="/patient" className="listItem">Patient</Link>
+
+            <Link activeClass="active" to="/therapist" className="listItem">Therapists</Link>           
             <ScrollLink
                activeClass="active"
                to="contact"

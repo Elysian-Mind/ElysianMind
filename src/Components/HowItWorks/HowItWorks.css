@@ -95,7 +95,7 @@
     background-color: #E6CB4F;
 }
 
-.card:hover {
+.howitworks .card:hover {
     animation: transform 1s ease-in-out infinite;
 }
 

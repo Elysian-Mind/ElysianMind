@@ -4,7 +4,7 @@ import heroImage from '../../Components/Assets/Hero.jpg'
 
 function Hero() {
   return (
-    <div className='container' id='home'>
+    <div className='container-home' id='home'>
         <img src={heroImage} alt="" className='heroimage'/>
         <div className="herotext">
             <h1> Elysian <br/><span>Mind</span></h1>
