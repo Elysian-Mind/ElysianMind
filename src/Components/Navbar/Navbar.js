@@ -108,7 +108,7 @@ function Navbar() {
             className="navMenu"
             style={{ display: showMenu ? "flex" : "none" }}
          >
-         <Link activeClass="active" to="/home" className="listItem">Home</Link>
+         <Link activeClass="active" to="/home" className="listItem customLink">Home</Link>
 
             {/* <ScrollLink
                activeClass="active"
@@ -147,9 +147,9 @@ function Navbar() {
                Resources
             </ScrollLink>
           
-            <Link activeClass="active" to="/patient" className="listItem">Patient</Link>
+            <Link activeClass="active" to="/patient" className="listItem customLink">Patient</Link>
 
-            <Link activeClass="active" to="/therapist" className="listItem">Therapists</Link>           
+            <Link activeClass="active" to="/therapist" className="listItem customLink">Therapists</Link>           
             <ScrollLink
                activeClass="active"
                to="contact"

@@ -57,14 +57,20 @@ const Chatbot = () => {
           <CloseIcon />
         </div>
         <div className="chat-section">
-          
-          {messages.map((message, index) => (
-            <div key={index} className={`message-container ${message.role}`}>
-              <div className={`message ${message.role}`}>
-                <p>{message.content}</p>
-              </div>
-            </div>
-          ))}
+          <div className="left-part">
+            {/* <div className="agent-chart"> */}
+              {messages.map((message, index) => (
+                
+              <div key={index} className={`message-container ${message.role}`}>
+                <div className={`message ${message.role}`}>
+                {/* <img src={ChatbotImage} alt="" /> */}
+                  <p>{message.content}</p>
+                </div>
+                
+              </div>))}
+            {/* </div> */}
+              
+          </div>
         </div>
         <div className="bottom-section">
           <CameraAltIcon />
