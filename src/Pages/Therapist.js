@@ -9,6 +9,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import Jacinta from '../Components/Assets/Jacinta.png'
 import Beryl from '../Components/Assets/beryl.png'
+
 const Therapists = () => {
 
 
