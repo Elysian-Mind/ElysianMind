@@ -1,8 +1,8 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// import { getAuth } from "firebase/auth";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyAWepouOsz_UtiEPBzDDDNkHuU-DBaNlNE",
   authDomain: "elysian-mind.firebaseapp.com",
   projectId: "elysian-mind",
@@ -12,6 +12,6 @@ const firebaseConfig = {
   measurementId: "G-VWCFHYGPSV"
 };
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-export const auth = getAuth();
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+// export const auth = getAuth();

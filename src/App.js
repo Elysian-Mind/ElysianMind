@@ -6,44 +6,17 @@ import Footer from './Components/Footer/Footer';
 import Therapist from './Pages/Therapist';
 import Patients from './Pages/Patients';
 import Chatbot from './Pages/Chatbot';
+import Reset from './Pages/auth/Reset';
+import Register from './Pages/auth/Register';
+import Secret from './Pages/protected/Secret'
 import { Login } from '@mui/icons-material';
-import Signup from './authentication/Signup';
-import Authentication from './authentication/Authentication';
-// import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { auth } from './firebase';
-import { useDispatch } from 'react-redux';
-import { loginUser, setLoading } from './features/userSlice';
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from './configs/firebaseConfig';
 
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    auth.onAuthStateChanged(authUser => {
-      if(authUser){
-        dispatch(
-          loginUser({
-          uid: authUser.uid,
-          username: authUser.displayName,
-          email: authUser.email,
-
-        })
-      );
-      dispatch(setLoading(false))
-
-      }else{
-        console.log("User is not logged in")
-        dispatch(setLoading(false));
-
-
-      }
-    });
-
-  }, [dispatch]);
-  // const user = useSelector(state => state.data.user.user)
+  initializeApp(firebaseConfig);
   
-
   return (
     <div>
     
@@ -55,13 +28,18 @@ function App() {
             <Route path='/therapist' element={<Therapist />} />
             <Route path='/patient' element={ <Patients />} />
             <Route path='/chatbot' element={ <Chatbot />} />
-            <Route path='/login' element={ <Login />} />
-            <Route path='/signup' element={ <Signup />} /> 
-            <Route path='/authentication' element={ <Authentication />} />
-  
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/reset' element={<Reset />} />
+            <Route path='/protected' element={<Secret />}/>
+
+          
         </Routes>
         <Footer />
       </Router>
+
+      
+     
 
 
       
