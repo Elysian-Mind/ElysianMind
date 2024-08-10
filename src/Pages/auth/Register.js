@@ -1,20 +1,36 @@
 import React, { useState } from 'react'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { Link, useNavigate } from 'react-router-dom';
 
 
-const Login = () =>  {
+const Register = () =>  {
     const [email, setEmail] = useState("")
     const [password,setPassword] = useState("")
     const auth = getAuth();
 
+    const [userType, setUserType] = useState("")
+    const navigate = useNavigate();
+    const handleUserTypeChange = (event) => {
+        setUserType(event.target.value);
+    }
+    
+
      const handleRegister = () => {
-        createUserWithEmailAndPassword(auth,email,password)
+            if (userType === 'Patient') {
+                navigate(``);
+            } else if (userType === 'Therapist') {
+                navigate(`/`);
+            }
+        
+
+         createUserWithEmailAndPassword(auth,email,password)
         .then((userCredential) => {
             const user = userCredential.user;
             console.log("Registered user: ", user)
             setEmail("")
             setPassword("")
         })
+
         .catch((error) => {
             const errorCode = error.code;
             const  errorMessage = error.message;
@@ -31,7 +47,7 @@ const Login = () =>  {
         <input
         type="text"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={(e) => setEmail(e.target.value)} required
         />
         <br />
         Password:
@@ -40,11 +56,42 @@ const Login = () =>  {
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        required
         />
         <br />
+        
+        <div className={`${!userType ? '' : 'selection'}`}>
+        
+        <div className='formfields' id='fields'>
+            <label>
+                    <input
+                        type='radio'
+                        value='Patient'
+                        checked={userType === 'Patient'}
+                        onChange={handleUserTypeChange}
+                        // style={{fontSize : '35px'}}
+                    />
+                    Patient
+                </label>
+                <label>
+                    <input
+                        type='radio'
+                        value='Therapist'
+                        checked={userType === 'Therapist'}
+                        onChange={handleUserTypeChange}
+                    />
+                    Therapist
+                </label>
+        </div>
+
         <button onClick={handleRegister}>Register</button>
+        <p>Already have an account? <Link activeClass="active" to="/login" className="login"> Log in</Link>
+        </p>
+  </div>
   </div>
   )
 }
 
-export default Login
+
+
+export default Register;

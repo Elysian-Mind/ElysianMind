@@ -5,12 +5,16 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../Assets/logo1.png";
 import "./Navbar.css";
+import { getAuth, signOut } from "firebase/auth";
+
 // import { useSelector } from 'react-redux';
 
 
 
 function Navbar() {
    const [showMenu, setShowMenu] = useState(false);
+   const auth = getAuth();
+
 
    return (
 
@@ -93,8 +97,8 @@ function Navbar() {
             ></ScrollLink>
          </div>
          
-         <Link to="/login" className="listItem customLink">
-            <button className="desktopMenuBtn"> <AccountCircleIcon /> Log In</button>
+         <Link to="/register" className="listItem customLink">
+            <button className="desktopMenuBtn"> <AccountCircleIcon /> Get Started</button>
          </Link>
 
          <div className="mobMenu">
@@ -105,7 +109,24 @@ function Navbar() {
             style={{ display: showMenu ? "flex" : "none" }}
          >
          <Link activeClass="active" to="/home" className="listItem customLink">Home</Link>
-         <Link activeClass="active" to="/register" className="listItem customLink"> authenticate</Link>
+         {/* <Link activeClass="active" to="/register" className="listItem customLink"> Register</Link>
+         <Link activeClass="active" to="/login" className="listItem customLink"> Log in</Link> */}
+         <Link
+               to="#"
+               onClick={() => {
+                  signOut(auth)
+                     .then(() => {
+                     console.log("user signed out");
+                     })
+                     .catch((error) => {
+                     console.log("error", error);
+                     });
+               }}
+               >
+               Log out
+         </Link>
+
+
 
          <ScrollLink
                activeClass="active"
@@ -147,7 +168,7 @@ function Navbar() {
             >
                Contact Us
             </ScrollLink>
-            <Link activeClass="active" to="/login" className="listItem customLink"> Log In </Link>
+            <Link activeClass="active" to="/register" className="listItem customLink"> Get Started </Link>
          </div>
       
        
