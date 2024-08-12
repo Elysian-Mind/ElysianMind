@@ -64,7 +64,17 @@
     display: flex;
     flex-direction: column;
   }
-  
+
+  .left-part img{
+    width: 20%;
+    border-radius: 50px;
+    margin-right: 10px;
+    background-color: #236277;
+  }
+  .left-part .agent-chart {
+    display: flex;
+    align-items: center;
+  }
   .message-container {
     width: 100%;
     display: flex;
