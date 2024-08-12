@@ -7,7 +7,8 @@ import Therapist from './Pages/Therapist';
 import Patients from './Pages/Patients';
 import Chatbot from './Pages/Chatbot';
 import Reset from './Pages/auth/Reset';
-import Register from './Pages/auth/Register';
+import SignUp from './Pages/auth/Register';
+import UserSelection from './Pages/auth/UserSelection';
 // import Secret from './Pages/protected/Secret'
 import Login from './Pages/auth/Login';
 import { initializeApp } from 'firebase/app';
@@ -17,9 +18,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { saveUser } from './redux/Slice/authSlice';
 import { useEffect } from 'react';
 import ProtectedRoute from './utils/ProtectedRoute';
+import React from 'react';
+import TherapistForm from './Pages/TherapistForm';
+import ProfilePage from './Pages/Profile';
 import Resources from './Pages/Resources';
 // import Contact from './Pages/Contactpage';
 import Contactpage from './Pages/Contactpage';
+
 
 
 
@@ -56,7 +61,7 @@ function App() {
             <Route path='/contact' element={<Contactpage />} />
             <Route path="/chatbot" element={<Chatbot />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
+            <Route path='/register' element={<SignUp />} />
             <Route path='/reset' element={<Reset />} />
             <Route path="/chatbot" element={
                     <ProtectedRoute>
@@ -64,7 +69,9 @@ function App() {
                     </ProtectedRoute>
                 } 
             />
-            
+            <Route path="/" element={<UserSelection />} />
+            <Route path="/therapist-form" element={<TherapistForm />} />
+            <Route path='/profile' element={<ProfilePage />} />            
 
           
         </Routes>
