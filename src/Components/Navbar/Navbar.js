@@ -61,32 +61,14 @@ function Navbar() {
             >
                How We Work
             </ScrollLink>
-            <ScrollLink
-               activeClass="active"
-               to="projects"
-               spy={true}
-               smooth={true}
-               offset={-100}
-               duration={500}
-               className="desktopMenuListItem"
-            >
-               Resources
-            </ScrollLink>
+            <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link>
+
             <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
 
             <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>           
-            <ScrollLink
-               activeClass="active"
-               to="contact"
-               spy={true}
-               smooth={true}
-               offset={-100}
-               duration={500}
-               className="desktopMenuListItem"
-            >
-               Contact Us
-            </ScrollLink>
-            <ScrollLink
+            <Link activeClass="active" to="/contact" className="desktopMenuListItem customLink">Contact Us</Link>           
+
+            {/* <ScrollLink
                activeClass="active"
                to="intro"
                spy={true}
@@ -94,7 +76,7 @@ function Navbar() {
                offset={-100}
                duration={500}
                className="desktopMenuListItem"
-            ></ScrollLink>
+            ></ScrollLink> */}
          </div>
          
          <Link to="/register" className="listItem customLink">
@@ -140,18 +122,9 @@ function Navbar() {
             >
                About Us
             </ScrollLink>
-            <ScrollLink
-               activeClass="active"
-               to="skills"
-               spy={true}
-               smooth={true}
-               offset={-50}
-               duration={500}
-               className="listItem"
-               onClick={() => setShowMenu(false)}
-            >
-               Resources
-            </ScrollLink>
+            
+            <Link activeClass="active" to="/resources" className="listItem customLink">Resources</Link>
+
           
             <Link activeClass="active" to="/patient" className="listItem customLink">Patient</Link>
 

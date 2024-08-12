@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { scroller } from 'react-scroll';
+// import { scroller } from 'react-scroll';
 import '../../src/Styles/Chatbot.css';
 import ChatbotImage from '../Components/Assets/Chatbot2.png';
 import CloseIcon from '@mui/icons-material/Close';
