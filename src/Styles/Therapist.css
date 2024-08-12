@@ -37,7 +37,8 @@
 }
 .therapist-card .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  background-color:  #5598AF;
+  max-width: 400px;
   margin: auto;
   justify-content: space-evenly;
   flex-direction: column;
@@ -45,14 +46,17 @@
 }
 
 .therapist-card .card img{
-  width: 80%;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: #236277;
 }
 
 .therapist-card h1{
   margin-top: 10px;
+  color: white;
 }
 .therapist-card .title {
-  color: grey;
+  color:#E6CB4F;
   font-size: 18px;
   margin-top: 10px;
 }
@@ -76,8 +80,10 @@
 
 .therapist-card a i svg{
   text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: -10px;
   font-size: 30px;
-  color: #5598AF;
+  color: white;
   /* margin-left: 10px; */
 }
 .therapist-card .card .icons{
@@ -88,13 +94,21 @@
 }
 .therapist-card  p button{
   background-color: #236277;
+  height: 60px;
+  width: 300px;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
 }
+
 
 .therapist-card button:hover, a:hover {
   opacity: 0.7;
 }
 .therapist-card button:hover{
   background-color: #E6CB4F;
+  color: #000;
 
 
 }

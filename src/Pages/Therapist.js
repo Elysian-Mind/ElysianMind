@@ -1,13 +1,17 @@
 import React, { useEffect } from 'react';
 import { scroller } from 'react-scroll';
 import FemaleTherapist from '../Components/Assets/femaletherapist.png'
-import Faith from '../Components/Assets/therapist1.png'
+import Faith from '../Components/Assets/Faith.png'
 import MaleTherapist from '../Components/Assets/maletherapist.png'
 import '../Styles/Therapist.css'
 import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import Jacinta from '../Components/Assets/Jacinta.png'
+import Beryl from '../Components/Assets/beryl.png'
+
 const Therapists = () => {
+
 
   useEffect(() => {
     scroller.scrollTo('therapist-section', {
@@ -35,39 +39,37 @@ const Therapists = () => {
           <img src={Faith} alt="" />
           <h1>Getrude Faith</h1>
           <p class="title">Clinical psychologist</p>
-          <p>University of Nairobi</p>
+          {/* <p>University of Nairobi</p> */}
           <div className="icons">
             <a href=""><i><XIcon /></i></a>
             <a href=""><i><LinkedInIcon /></i></a>
             <a href=""><i><FacebookIcon /></i></a>
           </div>
-            <p><button>Contact</button></p>
+            <p><button>CONTACT</button></p>
         </div>
         <div class="card">
-          <img src={FemaleTherapist} alt="" />
-          <h1>Jacinta</h1>
+          <img src={Jacinta} alt="" />
+          <h1>Jacinta Muriuki</h1>
           <p class="title">Clinical Psychologist</p>
-          <p>University of Nairobi</p>
+          {/* <p>Shofco</p> */}
           <div className="icons">
             <a href=""><i><XIcon /></i></a>
             <a href=""><i><LinkedInIcon /></i></a>
             <a href=""><i><FacebookIcon /></i></a>
           </div>
-            <p><button>Contact</button></p>
+            <p><button>CONTACT</button></p>
         </div>
         <div class="card">
-          <img src={FemaleTherapist} alt="" />
-          <h1>John Doe</h1>
-          <p class="title">CEO & Founder, Example</p>
-          <p>Harvard University</p>
-
-          
-          <div className="icons">
+          <img src={Beryl} alt="" />
+          <h1>Beryl Odhiambo</h1>
+          <p class="title">Clinical Psychologist</p>
+          {/* <p>University of Nairobi</p> */}
+            <div className="icons">
             <a href=""><i><XIcon /></i></a>
             <a href=""><i><LinkedInIcon /></i></a>
             <a href=""><i><FacebookIcon /></i></a>
           </div>
-            <p><button>Contact</button></p>
+            <p><button>CONTACT</button></p>
         </div>
       </div>
     </div>

@@ -5,15 +5,25 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../Assets/logo1.png";
 import "./Navbar.css";
+import { getAuth, signOut } from "firebase/auth";
+
+// import { useSelector } from 'react-redux';
+
+
 
 function Navbar() {
    const [showMenu, setShowMenu] = useState(false);
+   const auth = getAuth();
+
+
    return (
-      <nav className="navbar">      
-        <Link to="/home">
+
+      <nav className="navbar">
+         <Link to="/home">
         <img src={logo} alt="logo" className="logo" />
       </Link>
          <div className="desktopMenu">
+            
          <ScrollLink
                activeClass="active"
                to="home"
@@ -26,7 +36,8 @@ function Navbar() {
                Home
             </ScrollLink>
           
-        
+            <Link activeClass="active" to="/authentication" className="listItem customLink"> authenticate</Link>
+
           
             <ScrollLink
                activeClass="active"
@@ -86,19 +97,9 @@ function Navbar() {
             ></ScrollLink>
          </div>
          
-
-
-         <button
-            className="desktopMenuBtn"
-            onClick={() => {
-               var imageElement =
-                  document.getElementsByClassName("contactForm1");
-               imageElement[0].scrollIntoView({ behavior: "smooth" });
-            }}
-         >
-            {" "}
-            <AccountCircleIcon /> Log In
-         </button>
+         <Link to="/register" className="listItem customLink">
+            <button className="desktopMenuBtn"> <AccountCircleIcon /> Get Started</button>
+         </Link>
 
          <div className="mobMenu">
             <Menu onClick={() => setShowMenu(!showMenu)} />{" "}
@@ -107,19 +108,27 @@ function Navbar() {
             className="navMenu"
             style={{ display: showMenu ? "flex" : "none" }}
          >
-            <ScrollLink
-               activeClass="active"
-               to="home"
-               spy={true}
-               smooth={true}
-               offset={-50}
-               duration={500}
-               className="listItem"
-               onClick={() => setShowMenu(false)}
-            >
-               Home
-            </ScrollLink>
-            <ScrollLink
+         <Link activeClass="active" to="/home" className="listItem customLink">Home</Link>
+         {/* <Link activeClass="active" to="/register" className="listItem customLink"> Register</Link>
+         <Link activeClass="active" to="/login" className="listItem customLink"> Log in</Link> */}
+         <Link
+               to="#"
+               onClick={() => {
+                  signOut(auth)
+                     .then(() => {
+                     console.log("user signed out");
+                     })
+                     .catch((error) => {
+                     console.log("error", error);
+                     });
+               }}
+               >
+               Log out
+         </Link>
+
+
+
+         <ScrollLink
                activeClass="active"
                to="about"
                spy={true}
@@ -143,18 +152,10 @@ function Navbar() {
             >
                Resources
             </ScrollLink>
-            <ScrollLink
-               activeClass="active"
-               to="projects"
-               spy={true}
-               smooth={true}
-               offset={-50}
-               duration={500}
-               className="listItem"
-               onClick={() => setShowMenu(false)}
-            >
-               Our Therapists
-            </ScrollLink>
+          
+            <Link activeClass="active" to="/patient" className="listItem customLink">Patient</Link>
+
+            <Link activeClass="active" to="/therapist" className="listItem customLink">Therapists</Link>           
             <ScrollLink
                activeClass="active"
                to="contact"
@@ -167,7 +168,10 @@ function Navbar() {
             >
                Contact Us
             </ScrollLink>
+            <Link activeClass="active" to="/register" className="listItem customLink"> Get Started </Link>
          </div>
+      
+       
       </nav>
    );
 }
