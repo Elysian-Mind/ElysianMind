@@ -16,6 +16,7 @@ function Navbar() {
             <Link to="/home">
                 <img src={logo} alt="logo" className="logo" />
             </Link>
+
             <div className="desktopMenu">
                 <ScrollLink
                     activeClass="active"
@@ -67,7 +68,7 @@ function Navbar() {
                 <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>
                 <Link activeClass="active" to="/profile" className="desktopMenuListItem customLink">Profile</Link>
-=======
+                
           
             <ScrollLink
                activeClass="active"
@@ -98,15 +99,7 @@ function Navbar() {
             <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>           
             <Link activeClass="active" to="/contact" className="desktopMenuListItem customLink">Contact Us</Link>           
 
-            {/* <ScrollLink
-               activeClass="active"
-               to="intro"
-               spy={true}
-               smooth={true}
-               offset={-100}
-               duration={500}
-               className="desktopMenuListItem"
-            ></ScrollLink> */}
+            
          </div>
          
          <Link to="/register" className="listItem customLink">
@@ -183,7 +176,7 @@ function Navbar() {
                 >
                     Resources
                 </ScrollLink>
-=======
+
          <ScrollLink
                activeClass="active"
                to="about"
