@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { scroller } from 'react-scroll';
-import FemaleTherapist from '../Components/Assets/femaletherapist.png'
+// import FemaleTherapist from '../Components/Assets/femaletherapist.png'
 import Faith from '../Components/Assets/Faith.png'
-import MaleTherapist from '../Components/Assets/maletherapist.png'
+// import MaleTherapist from '../Components/Assets/maletherapist.png'
 import '../Styles/Therapist.css'
 import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
