@@ -67,6 +67,51 @@ function Navbar() {
                 <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>
                 <Link activeClass="active" to="/profile" className="desktopMenuListItem customLink">Profile</Link>
+=======
+          
+            <ScrollLink
+               activeClass="active"
+               to="about"
+               spy={true}
+               smooth={true}
+               offset={-100}
+               duration={500}
+               className="desktopMenuListItem"
+            >
+               About Us
+            </ScrollLink>
+            <ScrollLink
+               activeClass="active"
+               to="howitworks"
+               spy={true}
+               smooth={true}
+               offset={-100}
+               duration={500}
+               className="desktopMenuListItem"
+            >
+               How We Work
+            </ScrollLink>
+            <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link>
+
+            <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
+
+            <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>           
+            <Link activeClass="active" to="/contact" className="desktopMenuListItem customLink">Contact Us</Link>           
+
+            {/* <ScrollLink
+               activeClass="active"
+               to="intro"
+               spy={true}
+               smooth={true}
+               offset={-100}
+               duration={500}
+               className="desktopMenuListItem"
+            ></ScrollLink> */}
+         </div>
+         
+         <Link to="/register" className="listItem customLink">
+            <button className="desktopMenuBtn"> <AccountCircleIcon /> Get Started</button>
+         </Link>
 
                 <ScrollLink
                     activeClass="active"
@@ -138,6 +183,24 @@ function Navbar() {
                 >
                     Resources
                 </ScrollLink>
+=======
+         <ScrollLink
+               activeClass="active"
+               to="about"
+               spy={true}
+               smooth={true}
+               offset={-50}
+               duration={500}
+               className="listItem"
+               onClick={() => setShowMenu(false)}
+            >
+               About Us
+            </ScrollLink>
+            
+            <Link activeClass="active" to="/resources" className="listItem customLink">Resources</Link>
+
+          
+            <Link activeClass="active" to="/patient" className="listItem customLink">Patient</Link>
 
                 <Link activeClass="active" to="/patient" className="listItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="listItem customLink">Therapists</Link>

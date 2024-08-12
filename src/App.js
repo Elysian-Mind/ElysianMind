@@ -21,6 +21,10 @@ import ProtectedRoute from './utils/ProtectedRoute';
 import React from 'react';
 import TherapistForm from './Pages/TherapistForm';
 import ProfilePage from './Pages/Profile';
+import Resources from './Pages/Resources';
+// import Contact from './Pages/Contactpage';
+import Contactpage from './Pages/Contactpage';
+
 
 
 
@@ -53,6 +57,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path='/therapist' element={<Therapist />} />
             <Route path='/patient' element={ <Patients />} />
+            <Route path='/resource' element={ <Resources />} />
+            <Route path='/contact' element={<Contactpage />} />
             <Route path="/chatbot" element={<Chatbot />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<SignUp />} />

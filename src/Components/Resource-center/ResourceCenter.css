@@ -1,0 +1,137 @@
+.resource-center .title h1{
+    margin-top: 100px;
+
+    font-size: 60px;
+    align-items: left;
+    justify-content: left;
+    color: hsl(195, 36%, 51%);
+    margin-left: 100px;
+    font-size: 40px;
+}
+.resource-center .title h1 hr{
+    width: 300px;
+    margin-left: 5px;
+    height: 3px;
+    background-color: #5598AF;
+}
+.resource-center .title p{
+    font-size: 20px;
+    align-items: left;
+    margin-left: 100px;
+    font-weight: lighter;
+
+   
+}
+
+.resourceCenter{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 3em 0 3em 0;
+    margin-top: 30px;
+    margin-bottom: 150px;
+
+}
+.resourceCenter .card img{
+    border-radius: 0;
+    /* width: 80%; */
+    border-radius: 20px;
+    height: 400px;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    align-self: flex-start;
+    margin: auto;
+    display: flex;
+    position: absolute;
+}
+.resourceCenter .card {
+    position: relative;
+
+    /* background-color: #E6CB4F; */
+    height: 400px;
+    width: 500px;
+    /* background-color: transparent; */
+    align-items: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em;
+    box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+/* #howitworks .resourceCenter h4{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    color: black;
+    color: #5598AF;
+    font-size: 1.5em;
+} */
+.resourceCenter .container-text{
+    position: absolute;
+    bottom:0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 85%;
+    border-radius: 25px;
+    margin-bottom: 16px;
+    padding: 20px;
+}
+.resourceCenter .container-text h4{
+    align-items: left;
+}
+.resourceCenter .container-text p{
+    align-items: left;
+    flex-direction: row;
+}
+.resourceCenter .container-text button{
+    width: 300px;
+    border: none;
+    height: 60px;
+    background-color: white;
+    color: #5598AF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.resourceCenter p{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25em;
+    font-size: 1em;
+
+}
+
+
+/* .resource-center .card:hover {
+    animation: transform 1s ease-in-out infinite;
+} */
+
+@keyframes transform {
+  
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
