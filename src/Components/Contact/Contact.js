@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import './contact.css'
+import '../Contact/Contact.css'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -24,7 +24,7 @@ function Contact() {
       };
 
   return (
-    <section className='contactForm1'>
+    <section className='contactForm1' id='contact'>
         <div>
             <div className="contactPageTitle"> Contact Me</div>
             <span className="contactDesc"> Please fill out the form below to discuss any work opportunities</span>
