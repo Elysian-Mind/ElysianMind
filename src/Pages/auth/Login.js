@@ -1,49 +1,117 @@
-import { getAuth,signInWithEmailAndPassword } from 'firebase/auth';
-import React, { useState } from 'react'
-import "../../Pages/auth/Login.css"
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { handleLogin, handleSendPasswordResetEmail } from './Semi-Components/utils';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
-    const [email,setEmail] = useState("");
-    const [password,setPassword] = useState("");
-    const auth = getAuth();
+function Login() {
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+        resetEmail: '',
+        // uid: '',
 
+    });
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(null);
+    const [successMessage, setSuccessMessage] = useState(null);
+    const [isPasswordShown, setIsPasswordShown] = useState(false);
+    const [isForgotPasswordMode, setIsForgotPasswordMode] = useState(false);
 
-    const handleLogin = () => {
-        // const signIn = () => {
-            signInWithEmailAndPassword(auth,email,password)
-            .then((userCrendetial) => {
-                const user = userCrendetial.user;
-                console.log("Signed in user: ", user);
-            })
-            .catch((error) => {
-                const errorCode = error.code
-                const errorMessage = error.message;
-                console.log("An error occured: ", errorCode, errorMessage);
-            })
-        
+    const navigate = useNavigate();  // Hook for navigation
 
-    }
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevValues) => ({
+            ...prevValues,
+            [name]: value,
+        }));
+    };
 
+    const handleLoginsubmit = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
 
-  return (
-    <div className='login'>
-        <h1>Login</h1>
-        Email: <br />
-        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <br />
-        Password: <br />
-        <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <br />
-        <p>Forgot your password ? <Link activeClass="active" to="/reset" className="reset"> Reset Password</Link>
-        </p>
-        <button onClick={handleLogin}> Log In</button>
+        // Update formData with the new uid
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            uid: 'uid' // Use the actual UID logic here
+        }));
 
-        <p>Don't  have an account? <Link activeClass="active" to="/register" className="login"> Sign up</Link></p>
+        try {
+            if (isForgotPasswordMode) {
+                await handleSendPasswordResetEmail(formData.resetEmail);
+                setSuccessMessage('Password reset email sent successfully!');
+            } else {
+                const message = await handleLogin(formData, navigate); // Pass navigate to handleLogin
+                setSuccessMessage(message);
+            }
+        } catch (error) {
+            setErrorMessage(error.message || 'An error occurred');
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
-        
-    </div>
-  )
+    const toggleForgotPasswordMode = () => {
+        setIsForgotPasswordMode(!isForgotPasswordMode);
+        setFormData({ email: '', password: '', resetEmail: '' });
+    };
+
+    return (
+        <div>
+            <form className='form-container' onSubmit={handleLoginsubmit}>
+                <h1>Login</h1>
+                {isForgotPasswordMode ? (
+                    <div>
+                        <input
+                            name='resetEmail'
+                            type='email'
+                            placeholder='Email Address'
+                            value={formData.resetEmail}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <button disabled={isLoading || !formData.resetEmail}>
+                            {isLoading ? 'Sending Reset Email ...' : 'Reset Password'}
+                        </button>
+                        <p onClick={toggleForgotPasswordMode}>Back to Login</p>
+                    </div>
+                ) : (
+                    <div>
+                        <input
+                            name='email'
+                            type='email'
+                            placeholder='Email Address'
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <div>
+                            <input
+                                name='password'
+                                type={isPasswordShown ? 'text' : 'password'}
+                                placeholder='Password'
+                                value={formData.password}
+                                onChange={handleInputChange}
+                                required
+                            />
+                            <p onClick={() => setIsPasswordShown(!isPasswordShown)}>
+                                {isPasswordShown ? 'Hide' : 'Show'}
+                            </p>
+                        </div>
+                        <button
+                            disabled={isLoading || !formData.email || !formData.password}>
+                            {isLoading ? 'Logging You in...' : 'Login'}
+                        </button>
+                        <p onClick={toggleForgotPasswordMode} className='link'>Forgot Password</p>
+                    </div>
+                )}
+                <p>Or Register with us Today. <Link to='/Signup'>Sign up</Link></p>
+            </form>
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
+            {successMessage && <p className="success-message">{successMessage}</p>}
+        </div>
+    );
 }
 
-export default Login
+export default Login;

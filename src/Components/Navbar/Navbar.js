@@ -16,7 +16,6 @@ function Navbar() {
             <Link to="/home">
                 <img src={logo} alt="logo" className="logo" />
             </Link>
-
             <div className="desktopMenu">
                 <ScrollLink
                     activeClass="active"
@@ -68,43 +67,8 @@ function Navbar() {
                 <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>
                 <Link activeClass="active" to="/profile" className="desktopMenuListItem customLink">Profile</Link>
-                
-          
-            <ScrollLink
-               activeClass="active"
-               to="about"
-               spy={true}
-               smooth={true}
-               offset={-100}
-               duration={500}
-               className="desktopMenuListItem"
-            >
-               About Us
-            </ScrollLink>
-            <ScrollLink
-               activeClass="active"
-               to="howitworks"
-               spy={true}
-               smooth={true}
-               offset={-100}
-               duration={500}
-               className="desktopMenuListItem"
-            >
-               How We Work
-            </ScrollLink>
-            <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link>
+                <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link>
 
-            <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
-
-            <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>           
-            <Link activeClass="active" to="/contact" className="desktopMenuListItem customLink">Contact Us</Link>           
-
-            
-         </div>
-         
-         <Link to="/register" className="listItem customLink">
-            <button className="desktopMenuBtn"> <AccountCircleIcon /> Get Started</button>
-         </Link>
 
                 <ScrollLink
                     activeClass="active"
@@ -128,7 +92,7 @@ function Navbar() {
                 ></ScrollLink>
             </div>
 
-            <Link to="/register" className="listItem customLink">
+            <Link to="/Signup" className="listItem customLink">
                 <button className="desktopMenuBtn"> <AccountCircleIcon /> Get Started</button>
             </Link>
 
@@ -177,24 +141,6 @@ function Navbar() {
                     Resources
                 </ScrollLink>
 
-         <ScrollLink
-               activeClass="active"
-               to="about"
-               spy={true}
-               smooth={true}
-               offset={-50}
-               duration={500}
-               className="listItem"
-               onClick={() => setShowMenu(false)}
-            >
-               About Us
-            </ScrollLink>
-            
-            <Link activeClass="active" to="/resources" className="listItem customLink">Resources</Link>
-
-          
-            <Link activeClass="active" to="/patient" className="listItem customLink">Patient</Link>
-
                 <Link activeClass="active" to="/patient" className="listItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="listItem customLink">Therapists</Link>
                 <Link activeClass="active" to="/profile" className="listItem customLink">Profile</Link>
@@ -210,7 +156,7 @@ function Navbar() {
                 >
                     Contact Us
                 </ScrollLink>
-                <Link activeClass="active" to="/register" className="listItem customLink"> Get Started </Link>
+                <Link activeClass="active" to="/Signup" className="listItem customLink"> Get Started </Link>
             </div>
         </nav>
     );
