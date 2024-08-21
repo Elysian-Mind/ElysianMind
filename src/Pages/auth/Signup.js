@@ -35,7 +35,11 @@ function Signup() {
                 </div>
                 <button onClick={handleSubmit}> Continue</button>
             </div>
-            <p>Already have an account? <Link to='/login'>Log in</Link> </p>
+
+            <p>Already have an account Login below ... </p> 
+            <p> Therapist : <Link to='/therapistlogin'>Log in</Link> </p>
+            <p> Patient: <Link to='/patientlogin'>Log in</Link> </p>
+
         </div>
 
     </div>

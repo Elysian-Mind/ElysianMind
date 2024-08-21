@@ -10,7 +10,6 @@ export function useFormState() {
         previousExperience: '',
         documents: [],
         additionalComments: '',
-        // optInPreferences: [],
         termsAgreement: false,
     })
     const [patientFormData, setPatientFormData] = useState({

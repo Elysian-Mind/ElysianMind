@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import PatientContact from '../PatientForms/PatientContact';
+import PatientContact from '../Forms/PatientForms/PatientContact';
 import { handlePatientReg } from './utils';
 import { useFormState } from '../../../Components/forms/formsutils';
 

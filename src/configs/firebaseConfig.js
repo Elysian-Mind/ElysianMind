@@ -4,13 +4,13 @@ import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAWepouOsz_UtiEPBzDDDNkHuU-DBaNlNE",
-  authDomain: "elysian-mind.firebaseapp.com",
-  projectId: "elysian-mind",
-  storageBucket: "elysian-mind.appspot.com",
-  messagingSenderId: "199646453055",
-  appId: "1:199646453055:web:4dd9397c842ae6b6f7878a",
-  measurementId: "G-VWCFHYGPSV"
+  apiKey: "AIzaSyD63IFfB1MqeGcXbs9cXMRKJOZMfP3wZ6E",
+  authDomain: "elysian-9eed1.firebaseapp.com",
+  projectId: "elysian-9eed1",
+  storageBucket: "elysian-9eed1.appspot.com",
+  messagingSenderId: "178628130756",
+  appId: "1:178628130756:web:483515e2770b865a7e5691",
+  measurementId: "G-3XWTNF8L66"
 };
 
 

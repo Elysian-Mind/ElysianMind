@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useFormState } from '../../../Components/forms/formsutils'
-import TherapistContact from '../TherapistForms/TherapistContact';
+import TherapistContact from '../Forms/TherapistForms/TherapistContact';
 import { handleTherapistReg } from './utils';
 
 

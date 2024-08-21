@@ -6,7 +6,7 @@ import Footer from './Components/Footer/Footer';
 import Therapist from './Pages/Therapist';
 import Patients from './Pages/Patients';
 import Chatbot from './Pages/Chatbot';
-import Reset from './Pages/auth/Reset';
+// import Reset from './Pages/auth/Reset';
 import Signup from './Pages/auth/Signup';
 import ProtectedRoute from './utils/ProtectedRoute';
 import React from 'react';
@@ -15,9 +15,14 @@ import Resources from './Pages/Resources';
 import Contactpage from './Pages/Contactpage';
 import PatientReg from './Pages/auth/Semi-Components/PatientReg';
 import TherapistReg from './Pages/auth/Semi-Components/TherapistReg';
-import Login from './Pages/auth/Login';
+// import Login from './Pages/auth/Login';
 import Therapistprofile from './Pages/Therapistprofile';
 import Patientprofile from './Pages/Patientprofile';
+import TherapistLogin from './Pages/auth/Login/TherapistLogin';
+// import { PatientLogin } from './Pages/auth/Login/PatientLogin';
+import PatientLogin from './Pages/auth/Login/PatientLogin';
+
+
 
 
 
@@ -37,8 +42,11 @@ function App() {
             <Route path='/resource' element={ <Resources />} />
             <Route path='/contact' element={<Contactpage />} />
             <Route path="/chatbot" element={<Chatbot />} />
-            <Route path='login' element={<Login />} />
-            <Route path='/reset' element={<Reset />} />
+            <Route path='therapistlogin' element={<TherapistLogin />} />
+            <Route path='patientlogin' element={<PatientLogin />} />
+
+
+            {/* <Route path='/reset' element={<Reset />} /> */}
             <Route path="/chatbot" element={
                     <ProtectedRoute>
                         <Chatbot/>
