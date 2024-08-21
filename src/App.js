@@ -8,7 +8,6 @@ import Patients from './Pages/Patients';
 import Chatbot from './Pages/Chatbot';
 // import Reset from './Pages/auth/Reset';
 import Signup from './Pages/auth/Signup';
-import ProtectedRoute from './utils/ProtectedRoute';
 import React from 'react';
 import ProfilePage from './Pages/Profile';
 import Resources from './Pages/Resources';
@@ -47,12 +46,12 @@ function App() {
 
 
             {/* <Route path='/reset' element={<Reset />} /> */}
-            <Route path="/chatbot" element={
+            {/* <Route path="/chatbot" element={
                     <ProtectedRoute>
                         <Chatbot/>
                     </ProtectedRoute>
                 } 
-            />
+            /> */}
             <Route  path='/Signup' element={ <Signup />}/>
             <Route  path='/register/Patient' element={ <PatientReg /> }/>
             <Route path='register/Therapist'  element={<TherapistReg /> }/>

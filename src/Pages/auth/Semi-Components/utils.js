@@ -1,21 +1,58 @@
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
 import { db } from '../../../configs/firebaseConfig'
 import { collection, addDoc, doc, getDoc} from 'firebase/firestore';
+// import { Navigate } from 'react-router-dom';
 // import { useState } from 'react';
 // import firebase from 'firebase/compat/app';
 
 // import { useNavigate } from 'react-router-dom';
 
+// const navigate = useNavigate()
 
 
 const auth = getAuth();
+
+export const fetchUserType = async (uid) => {
+  if (!uid) 
+  {
+      console.log ('User ID is undefined or null')
+      return null
+  }
+  try {
+      console.log("Fetching user type for UID:", uid);
+
+      const therapistDoc = doc(db, 'TherapistData', uid)
+
+      const therapistSnapshot = await  getDoc(therapistDoc)
+
+      
+      if (therapistSnapshot.exists()){
+          console.log("User found in TherapistData");
+          return 'therapist'
+      }
+
+      const patientDoc = doc(db, 'PatientData', uid)
+
+      const patientSnapshot = await getDoc(patientDoc);
+      if (patientSnapshot.exists()) {
+          console.log("User found in PatientData");
+
+          return 'patient'
+      }
+      console.error('No such document found in either collection!'.error)
+
+  } catch (error) {
+      console.error("Error fetching user type:", error)
+      return null;
+  }
+}
 
 
 export const handleTherapistReg = async(formData) => {
 
     try{
         const therapistEmail = formData.email;
-        const password = therapistEmail;
+        const password = formData.password;
         const userCredential = await createUserWithEmailAndPassword(auth, therapistEmail, password)
 
         await sendEmailVerification(userCredential.user)
@@ -35,12 +72,13 @@ export const handleTherapistReg = async(formData) => {
         }
     }
 };
+
 export const handlePatientReg = async(formData) => {
 
 
     try{
         const patientEmail = formData.email;
-        const password = patientEmail;
+        const password = formData.password;
         const userCredential = await createUserWithEmailAndPassword(auth, patientEmail, password)
 
         await sendEmailVerification(userCredential.user)
@@ -82,23 +120,7 @@ export const handleTherapistLogin = async (email, password) => {
       throw error;
     }
   };
-  // const signInTherapist = async (email, password) => {
-  //   try {
-  //     console.log('Attempting to sign in therapist...');
-  //     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-  //     const user = userCredential.user;
-  //     console.log('User signed in:', user.uid);
   
-  //     const therapistDoc = await getDoc(doc(db, 'therapists', user.uid));
-  //     if (therapistDoc.exists()) {
-  //       console.log('Therapist details:', therapistDoc.data());
-  //     } else {
-  //       console.error('No therapist found with this UID');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error signing in therapist:', error.message);
-  //   }
-  // };
 
 
 
@@ -106,11 +128,23 @@ export const handleTherapistLogin = async (email, password) => {
 export const handlePatientLogin = async (formData) => {
     try {
         const { email, password } = formData;
+        // const navigate = useNavigate()
+
   
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         console.log('User logged in:', userCredential.user.uid);
-    
-        return 'Login successful!';
+        
+        // const userType = await fetchUserType(userCredential.user.uid);
+
+        // if (userType === 'therapist') {
+        //     navigate(`/therapist/profile/${userCredential.user.uid}`);
+        // } else if (userType === 'patient') {
+        //     navigate(`/patient/profile/${userCredential.user.uid}`);
+        // } else {
+        //     navigate('/patientlogin');
+        // }
+        return 'Login successful!'
+        
         
       } catch (error) {
         return Promise.reject(error);
@@ -143,40 +177,7 @@ export const handlePatientLogin = async (formData) => {
 // Login Functions
 
 
-// export const fetchUserType = async (uid) => {
-//     if (!uid) 
-//     {
-//         console.log ('User ID is undefined or null')
-//         return null
-//     }
-//     try {
-//         console.log("Fetching user type for UID:", uid);
 
-//         const therapistDoc = doc(db, 'TherapistData', uid)
-
-//         const therapistSnapshot = await  getDoc(therapistDoc)
-
-        
-//         if (therapistSnapshot.exists()){
-//             console.log("User found in TherapistData");
-//             return 'therapist'
-//         }
-
-//         const patientDoc = doc(db, 'PatientData', uid)
-
-//         const patientSnapshot = await getDoc(patientDoc);
-//         if (patientSnapshot.exists()) {
-//             console.log("User found in PatientData");
-
-//             return 'patient'
-//         }
-//         console.error('No such document found in either collection!'.error)
-
-//     } catch (error) {
-//         console.error("Error fetching user type:", error)
-//         return null;
-//     }
-// }
 
 
 

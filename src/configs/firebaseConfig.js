@@ -4,7 +4,7 @@ import { getFirestore} from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  piKey: "AIzaSyAWepouOsz_UtiEPBzDDDNkHuU-DBaNlNE",
+  apiKey: "AIzaSyAWepouOsz_UtiEPBzDDDNkHuU-DBaNlNE",
   authDomain: "elysian-mind.firebaseapp.com",
   projectId: "elysian-mind",
   storageBucket: "elysian-mind.appspot.com",

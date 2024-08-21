@@ -1,32 +1,17 @@
-.patientprofile {
+.patientprofile{
+    /* height: 100%; */
     width: 100%;
-    margin-bottom: 400px;
-
-}
-.patientprofile .container .row .column{
-    width: 100%;
-    margin-top: 0;
-    height: 100vh;
-    background-color: rgba(165, 200, 214, 0.137);
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-evenly;
     margin: auto;
-    justify-content: center;
-    display: flex-start;
-    flex-direction: column;
-    
-
-
+    padding: 3em 0 3em 0;
+    margin-top: 20px;
 
 }
-.patientprofile .column h1{
-    margin-top: 0px;
-    padding: 20px;
-    font-size: 30px;
-    color: #5598af;
-}
-.patientprofile .column button{
-    margin-left: 20px;
-
+.patientprofile  button{
+    margin-left: 30px;
     margin-top: 10px;
     font-size: 12px;
     font-weight: lighter;
@@ -38,18 +23,148 @@
     background-color: #5598af;
     padding: 5px;
 }
-.patientprofile .column h2{
-    font-size: 15px;
-    margin-top: 30px;
-    color: #5598af;
-    margin-left: 20px;
 
-}
-.patientprofile .column ul{
-    text-decoration: none;
-    list-style: none;
-    color: #E6CB4F;
-}
-.patientprofile .search svg{
-    font-size: 20px;
-}
+.patientprofile .card{
+    
+        /* background-color: #E6CB4F; */
+        height:750px;
+        width: 400px;
+        background-color: transparent;
+        align-items: center;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1em;
+        box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .patientprofile .card-profile img{
+        width: 30%;
+        border-radius: 50%;
+    
+    }
+    .patientprofile .card-profile{
+        margin-top: 30px;
+        display: flex;
+        width: 70%;
+        height: 100px;
+        padding: 10px;
+        background-color: #eedc8a;
+        border-radius: 15px;
+        margin-left: 10px;
+    
+    }
+    .patientprofile .card-profile .card-text{
+        margin-left: 20px;
+        font-size: 16px;
+        font-weight: lighter;
+    }
+    .patientprofile .card-profile .card-text h4{
+        font-size: 15px;
+        color: black;
+    }
+    .patientprofile .card-profile  .time{
+        font-size: 15px;
+        font-weight: light;
+        color: #5598af;
+        margin-top: 30%;
+        float: right;
+    }
+    
+    .patientprofile .card .threads h1{
+        color: #5598af;
+    }
+    .patientprofile .card .threads h2{
+        color: #5598af;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .patientprofile  ul{
+        text-decoration: none;
+        list-style: none;
+        color: #E6CB4F;
+    }
+
+    .patientprofile .search{
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        border: black;
+        border-radius: 10px;
+        height: 50px;
+        background-color: #5598af;
+    }
+    .patientprofile .search svg{
+        font-size: 20px;
+        color: white;
+    
+    }
+    .patientprofile .search input{
+        border-radius:5px;
+        background-color: white;
+        height: 30px;
+        width: 70%;
+        border: none;
+        /* background-color: #5598af; */
+        /* border-color: white; */
+    
+    
+    }
+    .card .personalinfo h1{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: #5598af;
+
+    }
+    .card .personalinfo img{
+        width: 40%;
+        border-radius: 30%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        background-color: #E6CB4F;
+    }
+    
+    .card .personalinfo .personal{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+
+    }
+    .personal ul p span{
+        font-weight: light;
+        color: #5598af;
+    }
+    .card .personalinfo .personal ul p{
+        font-weight: lighter;
+        font-size: 12px;
+        color: black;
+    }
+    .patientprofile .card .interests h2{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: #5598af;
+
+    }
+    .patientprofile .card .settings {
+        display: flex;
+        justify-content:space-around;
+        margin-top: 30px;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    .patientprofile .card .settings svg{
+        font-size: 20px;
+    }
+    

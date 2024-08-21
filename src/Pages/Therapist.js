@@ -41,9 +41,9 @@ const Therapists = () => {
           <p class="title">Clinical psychologist</p>
           {/* <p>University of Nairobi</p> */}
           <div className="icons">
-            <a href=""><i><XIcon /></i></a>
-            <a href=""><i><LinkedInIcon /></i></a>
-            <a href=""><i><FacebookIcon /></i></a>
+            <i><XIcon /></i>
+           <i><LinkedInIcon /></i>
+            <i><FacebookIcon /></i>
           </div>
             <p><button>CONTACT</button></p>
         </div>
@@ -53,9 +53,9 @@ const Therapists = () => {
           <p class="title">Clinical Psychologist</p>
           {/* <p>Shofco</p> */}
           <div className="icons">
-            <a href=""><i><XIcon /></i></a>
-            <a href=""><i><LinkedInIcon /></i></a>
-            <a href=""><i><FacebookIcon /></i></a>
+            <i><XIcon /></i>
+            <i><LinkedInIcon /></i>
+            <i><FacebookIcon /></i>
           </div>
             <p><button>CONTACT</button></p>
         </div>
@@ -65,9 +65,9 @@ const Therapists = () => {
           <p class="title">Clinical Psychologist</p>
           {/* <p>University of Nairobi</p> */}
             <div className="icons">
-            <a href=""><i><XIcon /></i></a>
-            <a href=""><i><LinkedInIcon /></i></a>
-            <a href=""><i><FacebookIcon /></i></a>
+            <i><XIcon /></i>
+            <i><LinkedInIcon /></i>
+            <i><FacebookIcon /></i>
           </div>
             <p><button>CONTACT</button></p>
         </div>
