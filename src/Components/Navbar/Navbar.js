@@ -66,8 +66,9 @@ function Navbar() {
                 </ScrollLink>
                 <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>
-                <Link activeClass="active" to="/profile" className="desktopMenuListItem customLink">Profile</Link>
                 <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link>
+                <Link activeClass="active" to="/patientprofile" className="desktopMenuListItem customLink">Patient Profile</Link>
+
 
 
                 <ScrollLink

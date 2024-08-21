@@ -58,7 +58,7 @@ function App() {
             <Route path='register/Therapist'  element={<TherapistReg /> }/>
             <Route path='/profile' element={<ProfilePage />} />  
             <Route path='/therapist/Therapistprofile' element={<Therapistprofile />} />  
-            <Route path='/patient/Patientprofile' element={<Patientprofile />} />       
+            <Route path='/Patientprofile' element={<Patientprofile />} />       
 
           
         </Routes>

@@ -1,0 +1,55 @@
+.patientprofile {
+    width: 100%;
+    margin-bottom: 400px;
+
+}
+.patientprofile .container .row .column{
+    width: 100%;
+    margin-top: 0;
+    height: 100vh;
+    background-color: rgba(165, 200, 214, 0.137);
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    display: flex-start;
+    flex-direction: column;
+    
+
+
+
+}
+.patientprofile .column h1{
+    margin-top: 0px;
+    padding: 20px;
+    font-size: 30px;
+    color: #5598af;
+}
+.patientprofile .column button{
+    margin-left: 20px;
+
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+    width: 100px;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5598af;
+    padding: 5px;
+}
+.patientprofile .column h2{
+    font-size: 15px;
+    margin-top: 30px;
+    color: #5598af;
+    margin-left: 20px;
+
+}
+.patientprofile .column ul{
+    text-decoration: none;
+    list-style: none;
+    color: #E6CB4F;
+}
+.patientprofile .search svg{
+    font-size: 20px;
+}
