@@ -1,0 +1,91 @@
+.card-contact #therapist{
+    /* height: 100%; */
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 3em 0 3em 0;
+    margin-top: 20px;
+    box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2);
+
+}
+.card-contact .therapistcontact {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.card-contact .therapistcontact h1{
+    color: #df3c22;
+    font-size: 30px;
+}
+.card-contact .therapistcontact h2{
+    font-weight: lighter;
+    font-size: 22px;
+    margin-top: 5px;
+
+}
+.card-contact .therapistcontact input{
+    height: 10px;
+    margin: 10px;
+    width: 250px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.25em 1em rgba(4, 107, 114, 0.2);
+
+    
+    /* border-bottom: 3px; */
+}
+
+.card-contact .therapistcontact input ::placeholder{
+    color: #df3c22;
+}
+.therapistcontact .form-component h4{
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #df3c22;
+    margin-top: 30px;
+
+
+}
+
+.form-component #documents input{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+
+.therapistcontact .form-component label{
+    font-size: 15px;
+    font-weight: lighter;
+}
+.therapistcontact .form-component input{
+    height: 20px;
+    width: 20px;
+    border-color: #df3c22;
+}
+.card-contact .navigate .final{
+    color: #df3c22;
+    margin-top: 30px;
+    font-weight: light;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+.card-contact .navigate .login{
+    text-decoration: none;
+    font-weight: bolder;
+    color: #df3c22;
+    
+    
+}
+
+

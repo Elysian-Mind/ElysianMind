@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import '../TherapistForms/TherapistContact.css'
 
 
 const TherapistContact = ({ formData, handleChange }) => {
@@ -10,9 +11,9 @@ const TherapistContact = ({ formData, handleChange }) => {
 
 
   return (
-    <div>
+    <div className='card-contact' id='therapist'>
     <div className='therapistcontact'>
-      <h1>Create an Account</h1>
+      <h1>Create Account : Therapist</h1>
       <h2>Fill in Your details</h2>
       <input 
       name="firstname"
@@ -61,22 +62,24 @@ const TherapistContact = ({ formData, handleChange }) => {
 
 
 
-    </div>
+    {/* </div> */}
     <div className="form-component">
-      <h4 className='form-sec-title'> Relevant Documentation</h4>
-      <input
-      name='documents' 
-      type="file" 
-      multiple
-      onChange={handleFileChange}
-      required />
-      {formData.documents && formData.documents.length > 0 && (
-        <ul>
-          {formData.documents.map((file, index) => (
-            <li key={index}>{file.name}</li>
-          ))}
-        </ul>
-      )}
+      <h4 className='form-sec-title' > Relevant Documentation</h4>
+      <div id="documents">
+          < input
+          name='documents' 
+          type="file" 
+          multiple
+          onChange={handleFileChange}
+          required />
+          {formData.documents && formData.documents.length > 0 && (
+            <ul>
+              {formData.documents.map((file, index) => (
+                <li key={index}>{file.name}</li>
+              ))}
+            </ul>
+          )}
+      </div>
 
       <h4 className='form-sec-title'>Compliance & Terms Agreement</h4>
       <label>
@@ -89,12 +92,15 @@ const TherapistContact = ({ formData, handleChange }) => {
       </label>
 
     </div>
-
-    <p>Already have an account ? <Link to='/therapistlogin'>Log in </Link></p>
-
-
-
     </div>
+      <div className="navigate">
+      <p className='final'>Already have an account ? <Link className='login'to='/therapistlogin'>Log in </Link></p>
+
+      </div>
+</div>
+
+
+    // </div>
 
   )
 

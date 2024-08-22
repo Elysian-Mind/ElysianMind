@@ -1,0 +1,108 @@
+.choose {
+    width: 500px;
+    height: 500px;
+    /* background-color: brown; */
+    border-radius: 25px;
+    box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+    /* flex-direction: column; */
+
+}
+.choose .formcomponent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.choose .formcomponent .form-title{
+    color: #df3c22;
+    font-size: 25px;
+   
+
+}
+.choose .formcomponent .form-text {
+    font-weight: lighter;
+    font-size: 22px;
+}
+.choose .formcomponent .form-text hr{
+    width: 150px;
+    margin-left: -20px;
+    color: #df3c22;
+    
+}
+.choose .formcomponent .formfields{
+    font-size: 20px;
+    display: flex;
+    color: #df3c22;
+    
+    /* padding: 20px; */
+
+    /* justify-content: space-evenly; */
+}
+
+.choose .formcomponent .formfields label{
+    margin: 10px;
+    /* justify-content: space-a; */
+}
+.choose .formcomponent .formfields input{
+    color: #df3c22;
+}
+.choose .formcomponent .submit {
+    background-color: #df3c22;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight:light;
+    margin-bottom: 30px;
+    
+}
+.choose .formcomponent .submit:hover{
+    background-color: white;
+    color: #df3c22;
+    box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2);
+
+
+
+}
+.choose .formcomponent .other p{
+    font-weight: lighter;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.choose .formcomponent .other button{
+    margin: 30px;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2);
+
+
+
+}
+.choose .formcomponent .other button:hover{
+    background-color: #df3c22;
+    color: white;
+}
+.choose .formcomponent .other .link:hover{
+    color: white;
+}
+.choose .formcomponent .other .link{
+    text-decoration: none;
+    color: #df3c22;
+    font-size: 15px;
+
+}
+

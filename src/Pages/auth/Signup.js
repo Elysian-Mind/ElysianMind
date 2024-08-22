@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import '../../Styles/Signup.css'
 
 
 function Signup() {
@@ -21,7 +22,8 @@ function Signup() {
   return (
     <div className='choose'>
         <div className="formcomponent">
-            <h1 className='form-title'> Who are you signing up as?</h1>
+            <h1 className='form-title'> Create Account</h1>
+            <h4 className='form-text'>Select User <hr /> </h4>
             <div className={`${!userType ? '' : 'selection'}`}>
                 <div className="formfields" id='fields'>
                     <label>
@@ -33,13 +35,16 @@ function Signup() {
                     Patient
                     </label>
                 </div>
-                <button onClick={handleSubmit}> Continue</button>
+                <button className='submit' onClick={handleSubmit}> Continue</button>
             </div>
+            <div className="other">
 
-            <p>Already have an account Login below ... </p> 
-            <p> Therapist : <Link to='/therapistlogin'>Log in</Link> </p>
-            <p> Patient: <Link to='/patientlogin'>Log in</Link> </p>
+                <p>Already have an account Login below ... </p> 
+                <button><Link className='link'to='/therapistlogin'>Therapist</Link></button>
+                <button><Link className='link' to='/patientlogin'>Patient</Link></button>
+                </div>
 
+                
         </div>
 
     </div>

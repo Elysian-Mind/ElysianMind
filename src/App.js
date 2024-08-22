@@ -56,8 +56,10 @@ function App() {
             <Route  path='/register/Patient' element={ <PatientReg /> }/>
             <Route path='register/Therapist'  element={<TherapistReg /> }/>
             <Route path='/profile' element={<ProfilePage />} />  
-            <Route path='/therapist/Therapistprofile' element={<Therapistprofile />} />  
-            <Route path='/Patientprofile' element={<Patientprofile />} />       
+            {/* <Route path='/therapist/Therapistprofile' element={<Therapistprofile />} />   */}
+            <Route path='/Patientprofile' element={<Patientprofile />} />
+            <Route path='/therapistprofile' element={<Therapistprofile />} />       
+       
 
           
         </Routes>

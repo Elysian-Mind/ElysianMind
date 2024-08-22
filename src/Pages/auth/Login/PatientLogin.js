@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { handlePatientLogin, handleSendPasswordResetEmail } from '../Semi-Components/utils';
 import { Link } from 'react-router-dom';
+import '../Login/PatientLogin.css'
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 function PatientLogin() {
         const [formData, setFormData] = useState({
@@ -55,7 +58,7 @@ function PatientLogin() {
         return (
             <div>
                 <form className='form-container' onSubmit={handleLoginsubmit}>
-                    <h1>Login As a Patient</h1>
+                    <h1>Login : Patient</h1>
                     {isForgotPasswordMode ? (
                         <div>
                             <input
@@ -81,7 +84,7 @@ function PatientLogin() {
                                 onChange={handleInputChange}
                                 required
                             />
-                            <div>
+                            <div id='password'>
                                 <input
                                     name='password'
                                     type={isPasswordShown ? 'text' : 'password'}
@@ -89,20 +92,23 @@ function PatientLogin() {
                                     value={formData.password}
                                     onChange={handleInputChange}
                                     required
+                                    
                                 />
-                                <p onClick={() => setIsPasswordShown(!isPasswordShown)}>
-                                    {isPasswordShown ? 'Hide' : 'Show'}
+                                <p className='visibility' onClick={() => setIsPasswordShown(!isPasswordShown)}>
+                                    {isPasswordShown ? <VisibilityOffIcon /> : <VisibilityIcon />}
                                 </p>
                             </div>
+                            <p onClick={toggleForgotPasswordMode} className='link'>Forgot Password?</p>
+
+
                             <button
                                 disabled={isLoading || !formData.email || !formData.password}>
                                 {isLoading ? 'Logging You in...' : 'Login'}
                             </button>
-                            <p onClick={toggleForgotPasswordMode} className='link'>Forgot Password</p>
                         </div>
                     )}
     
-                    <p>Or Register with us Today. <Link to='/register/Login'>Sign up</Link></p>
+                    <p className='register'>Or Register with us Today here :  <Link className='sign' to='/Signup'>Sign up</Link></p>
                 </form>
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
                 {successMessage && <p className="success-message">{successMessage}</p>}

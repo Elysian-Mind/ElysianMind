@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../Assets/logo1.png";
 import "./Navbar.css";
-import { getAuth, signOut } from "firebase/auth";
+// import { getAuth, signOut } from "firebase/auth";
+// import Dropdown from 'react-bootstrap/Dropdown';
+
 
 function Navbar() {
     const [showMenu, setShowMenu] = useState(false);
-    const auth = getAuth();
+    // const auth = getAuth();
 
     return (
         <nav className="navbar">
@@ -66,8 +68,12 @@ function Navbar() {
                 </ScrollLink>
                 <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>
+                {/* <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link> */}
                 <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link>
+
                 <Link activeClass="active" to="/patientprofile" className="desktopMenuListItem customLink">Patient Profile</Link>
+                <Link activeClass="active" to="/therapistprofile" className="desktopMenuListItem customLink">Therapist Profile</Link>
+
 
 
 
@@ -102,7 +108,7 @@ function Navbar() {
             </div>
             <div className="navMenu" style={{ display: showMenu ? "flex" : "none" }}>
                 <Link activeClass="active" to="/home" className="listItem customLink">Home</Link>
-                <Link
+                {/* <Link
                     to="#"
                     onClick={() => {
                         signOut(auth)
@@ -115,7 +121,7 @@ function Navbar() {
                     }}
                 >
                     Log out
-                </Link>
+                </Link> */}
 
                 <ScrollLink
                     activeClass="active"
@@ -129,7 +135,7 @@ function Navbar() {
                 >
                     About Us
                 </ScrollLink>
-                <ScrollLink
+                {/* <ScrollLink
                     activeClass="active"
                     to="skills"
                     spy={true}
@@ -140,11 +146,19 @@ function Navbar() {
                     onClick={() => setShowMenu(false)}
                 >
                     Resources
-                </ScrollLink>
+                </ScrollLink> */}
 
                 <Link activeClass="active" to="/patient" className="listItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="listItem customLink">Therapists</Link>
-                <Link activeClass="active" to="/profile" className="listItem customLink">Profile</Link>
+                <Link activeClass="active" to="/resource" className="listItem customLink">Resources</Link>
+
+                {/* <Link activeClass="active" to="/profile" className="listItem customLink">Profile</Link> */}
+                <Link activeClass="active" to="/patientprofile" className="listItem customLink">Patient Profile</Link>
+                <Link activeClass="active" to="/therapistprofile" className="listItem customLink">Therapist Profile</Link>
+
+
+
+
                 <ScrollLink
                     activeClass="active"
                     to="contact"

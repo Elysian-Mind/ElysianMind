@@ -10,6 +10,13 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Article1 from "../Assets/Article1.jpg"
 import Video1 from "../Assets/video1.jpg"
 import WorkIcon from '@mui/icons-material/Work';
+import adhd from '../Assets/adhd.jpg'
+import autism from '../Assets/autism.jpg'
+import ptsd from '../Assets/ptsd.jpg'
+import anxiety  from '../Assets/anxiety.jpg'
+import depression from "../Assets/mental health.jpg"
+
+
 
 function Casestudies() {
   return (
@@ -99,7 +106,7 @@ function Casestudies() {
             </div>
 
             <div className="card">
-                <img src={Article1} alt="" />
+                <img src={anxiety} alt="" />
                 <div className="container-text">
                     <h4>ANXIETY</h4>
                     <p>Read about mental health according Anxiety ...</p>
@@ -121,7 +128,7 @@ function Casestudies() {
                 </div>
             </div>
             <div className="card">
-                <img src={Article1} alt="" />
+                <img src={autism} alt="" />
                 <div className="container-text">
                     <h4>AUTISM</h4>
                     <p>Read about mental health according WHO ...</p>
@@ -140,7 +147,7 @@ function Casestudies() {
                 </div>
             </div>
             <div className="card">
-                <img src={Article1} alt="" />
+                <img src={ptsd} alt="" />
                 <div className="container-text">
                     <h4>PTSD</h4>
                     <p>Read about mental health according WHO ...</p>
@@ -159,7 +166,7 @@ function Casestudies() {
                 </div>
             </div>
             <div className="card">
-                <img src={Article1} alt="" />
+                <img src={adhd} alt="" />
                 <div className="container-text">
                     <h4>ADHD</h4>
                     <p>Read about mental health according WHO ...</p>
@@ -178,7 +185,7 @@ function Casestudies() {
                 </div>
             </div>
             <div className="card">
-                <img src={Article1} alt="" />
+                <img src={depression} alt="" />
                 <div className="container-text">
                     <h4>DEPRESSION</h4>
                     <p>Read about mental health according WHO ...</p>

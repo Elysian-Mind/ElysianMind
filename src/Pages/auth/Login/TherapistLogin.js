@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { handleTherapistLogin, handleSendPasswordResetEmail } from '../Semi-Components/utils';
 import { Link } from 'react-router-dom';
+// import '../Login/PatientLogin.css'
+import '../Login/TherapistLogin.css'
+
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 
 function TherapistLogin() {
@@ -60,8 +65,8 @@ function TherapistLogin() {
 
     return (
         <div>
-            <form className='form-container' onSubmit={handleLoginsubmit}>
-                <h1>Login As a Therapist</h1>
+            <form className='form-container-therapist' onSubmit={handleLoginsubmit}>
+                <h1>Login : Therapist</h1>
                 {isForgotPasswordMode ? (
                     <div>
                         <input
@@ -87,7 +92,7 @@ function TherapistLogin() {
                             onChange={handleInputChange}
                             required
                         />
-                        <div>
+                        <div id='password'>
                             <input
                                 name='password'
                                 type={isPasswordShown ? 'text' : 'password'}
@@ -96,15 +101,16 @@ function TherapistLogin() {
                                 onChange={handleInputChange}
                                 required
                             />
-                            <p onClick={() => setIsPasswordShown(!isPasswordShown)}>
-                                {isPasswordShown ? 'Hide' : 'Show'}
-                            </p>
+                           <p className='visibility' onClick={() => setIsPasswordShown(!isPasswordShown)}>
+                                    {isPasswordShown ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                                </p>
                         </div>
+                        <p onClick={toggleForgotPasswordMode} className='link'>Forgot Password ?</p>
+
                         <button
                             disabled={isLoading || !formData.email || !formData.password}>
                             {isLoading ? 'Logging You in...' : 'Login'}
                         </button>
-                        <p onClick={toggleForgotPasswordMode} className='link'>Forgot Password</p>
 {/* <button type='button' onClick={() => fetchUserType("KsmskadY4Ik9unVNb58e").then((res) => {
                             console.log ("fetch user success" + res)
                         }
@@ -116,8 +122,8 @@ function TherapistLogin() {
                     </div>
                 )}
 
-                <p>Or Register with us Today. <Link to='/signup'>Sign up</Link></p>
-            </form>
+<p className='register'>Or Register with us Today here :  <Link className='sign' to='/Signup'>Sign up</Link></p>
+</form>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             {successMessage && <p className="success-message">{successMessage}</p>}
         </div>
