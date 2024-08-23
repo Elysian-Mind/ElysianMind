@@ -4,6 +4,8 @@ import textsms from '../Assets/text.png'
 import therapy from '../Assets/therapy.png'
 import plan from '../Assets/Plan.png'
 import breakout from '../Assets/breakoutroom.png'
+import { Link } from 'react-router-dom'
+
 
 function HowItWorks() {
   return (
@@ -39,8 +41,9 @@ function HowItWorks() {
                     <p>Use our breakout room to vent anonymously!</p>
                 </div>
             </div>
-        </div>    
-        <button>Join Us</button>
+        </div>   
+ 
+        <button> <Link className='sign-up' to="/Signup" >Join Us</Link></button>
 
     </div>
   )

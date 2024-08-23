@@ -5,7 +5,7 @@ import HealingOutlinedIcon from '@mui/icons-material/HealingOutlined';
 import SpaOutlinedIcon from '@mui/icons-material/SpaOutlined';
 import PatientImg from '../../src/Components/Assets/patient.jpeg'
 import SouthOutlinedIcon from '@mui/icons-material/SouthOutlined';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import '../Styles/Patients.css'
 import { Link } from 'react-router-dom';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
