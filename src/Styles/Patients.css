@@ -139,6 +139,10 @@
     margin: auto;
     margin-top: 20px;
 }
+.card .container button #whatsapp{
+    text-decoration: none;
+    color: white;
+}
 .card .container button:hover{
     background-color: #5598af;
 }

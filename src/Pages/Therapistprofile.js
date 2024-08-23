@@ -30,6 +30,8 @@ function Therapistprofile() {
                     <p>Speciality: <span>Teenagers</span>
                     </p>
                     <p>Qualification: <span>Masters Student</span></p>
+                    <p>Rates: <span>$10+</span></p>
+
 
                     <p>Gender : <span>She\her</span></p>
                     </ul>
