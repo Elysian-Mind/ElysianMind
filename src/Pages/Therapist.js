@@ -35,7 +35,7 @@ const Therapists = () => {
 
       </div>
       <div className="therapist-card">
-        <div class="card">
+        <div class="card" id='card'>
           <img src={Faith} alt="" />
           <h1>Getrude Faith</h1>
           <p class="title">Clinical psychologist</p>
@@ -47,7 +47,7 @@ const Therapists = () => {
           </div>
             <p><button>CONTACT</button></p>
         </div>
-        <div class="card">
+        <div class="card" id='card'>
           <img src={Jacinta} alt="" />
           <h1>Jacinta Muriuki</h1>
           <p class="title">Clinical Psychologist</p>
@@ -59,7 +59,7 @@ const Therapists = () => {
           </div>
             <p><button>CONTACT</button></p>
         </div>
-        <div class="card">
+        <div class="card" id='card'>
           <img src={Beryl} alt="" />
           <h1>Beryl Odhiambo</h1>
           <p class="title">Clinical Psychologist</p>
