@@ -78,7 +78,7 @@
   margin-top: 20px;
 }
 
-.therapist-card a i svg{
+#card svg{
   text-decoration: none;
   margin-top: 20px;
   margin-bottom: -10px;
@@ -86,11 +86,12 @@
   color: white;
   /* margin-left: 10px; */
 }
-.therapist-card .card .icons{
+.therapist .card .icons{
   align-items: center;
   justify-content: center;
   display: flex;
   margin-top: 20px;
+  color: white;
 }
 .therapist-card  p button{
   background-color: #236277;

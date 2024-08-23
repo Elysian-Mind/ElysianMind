@@ -50,7 +50,7 @@ const Patients = () => {
                         <div className="container">
                         <h4> <ConnectWithoutContactOutlinedIcon />Connect</h4>
                         <p>Get to connect with other patients anonymously</p>
-                        <button>Create Room</button>
+                        <button> <a id='whatsapp' href="https://chat.whatsapp.com/JHTY9a1bFcy8IbVGKZjQUw">Create Room</a></button>
 
                         </div>
                     </div>
@@ -58,14 +58,18 @@ const Patients = () => {
                         <div className="container">
                             <h4> <HealingOutlinedIcon />Heal</h4>
                             <p>Talk to a therapist of your choice and get to heal</p>
-                            <button>Contact a Therapist</button>
+                            {/* <button><Link  to="/therapist" className="desktopMenuListItem customLink">  Contact a Therapist</Link> </button> */}
+                            <Link to="/therapist" className='customLink'><button id='therapist-link'> Contact a Therapist</button></Link>
+
                         </div>
                     </div>
                     <div className="card">
                         <div className="container">
                             <h4><SpaOutlinedIcon />Grow </h4>
                             <p>Grow mentally at your own pace with resources</p>
-                            <button>Review Resources</button>
+                         
+                            <Link to="/resource" className="customLink"><button>Review Resources</button></Link>
+
                         </div>
                     </div>
 

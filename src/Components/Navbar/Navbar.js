@@ -31,7 +31,7 @@ function Navbar() {
                     Home
                 </ScrollLink>
 
-                <Link activeClass="active" to="/authentication" className="listItem customLink">Authenticate</Link>
+                {/* <Link activeClass="active" to="/authentication" className="listItem customLink">Authenticate</Link> */}
 
                 <ScrollLink
                     activeClass="active"
@@ -55,7 +55,7 @@ function Navbar() {
                 >
                     How We Work
                 </ScrollLink>
-                <ScrollLink
+                {/* <ScrollLink
                     activeClass="active"
                     to="projects"
                     spy={true}
@@ -65,7 +65,7 @@ function Navbar() {
                     className="desktopMenuListItem"
                 >
                     Resources
-                </ScrollLink>
+                </ScrollLink> */}
                 <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>
                 {/* <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link> */}
