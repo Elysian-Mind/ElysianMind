@@ -1,6 +1,7 @@
 import React from 'react';
 import about from '../Assets/about-us-image.jpg'
 import '../../Components/About/About.css'
+import { Link } from 'react-router-dom';
 
 
   
@@ -19,7 +20,7 @@ function About() {
                         You can also connect with others or vent anonymously in our secure online space. 
                         We work with most insurance providers 
                         to ensure affordable access to mental healthcare for everyone.</p>
-                        <button> Sign up</button>
+                        <button> <Link className='sign-up' to="/Signup" >Sign Up</Link></button>
 
                 </div>
 

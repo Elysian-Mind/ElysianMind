@@ -91,6 +91,10 @@
     border-radius: 40px;
     background-color: #5598AF;
 }
+.howitworks .sign-up{
+    text-decoration: none;
+    color: white;
+}
 .howitworks button:hover{
     background-color: #E6CB4F;
 }

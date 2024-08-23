@@ -111,7 +111,7 @@
     color: #df3c22;
     font-size: 30px;
     float: left;
-    align-items: start;
+    align-items: flex-start;
     margin-right: 30px;
     display: flex;
 }

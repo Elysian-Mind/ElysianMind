@@ -6,46 +6,27 @@ import Footer from './Components/Footer/Footer';
 import Therapist from './Pages/Therapist';
 import Patients from './Pages/Patients';
 import Chatbot from './Pages/Chatbot';
-import Reset from './Pages/auth/Reset';
-import SignUp from './Pages/auth/Register';
-import UserSelection from './Pages/auth/UserSelection';
-// import Secret from './Pages/protected/Secret'
-import Login from './Pages/auth/Login';
-import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from './configs/firebaseConfig';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { useDispatch, useSelector } from 'react-redux';
-import { saveUser } from './redux/Slice/authSlice';
-import { useEffect } from 'react';
-import ProtectedRoute from './utils/ProtectedRoute';
+// import Reset from './Pages/auth/Reset';
+import Signup from './Pages/auth/Signup';
 import React from 'react';
-import TherapistForm from './Pages/TherapistForm';
 import ProfilePage from './Pages/Profile';
 import Resources from './Pages/Resources';
-// import Contact from './Pages/Contactpage';
 import Contactpage from './Pages/Contactpage';
+import PatientReg from './Pages/auth/Semi-Components/PatientReg';
+import TherapistReg from './Pages/auth/Semi-Components/TherapistReg';
+// import Login from './Pages/auth/Login';
+import Therapistprofile from './Pages/Therapistprofile';
+import Patientprofile from './Pages/Patientprofile';
+import TherapistLogin from './Pages/auth/Login/TherapistLogin';
+// import { PatientLogin } from './Pages/auth/Login/PatientLogin';
+import PatientLogin from './Pages/auth/Login/PatientLogin';
+
+
 
 
 
 
 function App() {
-  initializeApp(firebaseConfig);
-  const auth = getAuth();
-  const user = useSelector((state) => state.auth.value);
-  console.log("user from state", user);
-  const dispatch = useDispatch();
-  
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      console.log("Auth state changed, user:", user); 
-      if (user) {
-        dispatch(saveUser(user.refreshToken));
-      } else {
-        dispatch(saveUser(undefined));
-      }
-    });
-  }, [auth, dispatch]);
   
   return (
     <div>
@@ -60,18 +41,25 @@ function App() {
             <Route path='/resource' element={ <Resources />} />
             <Route path='/contact' element={<Contactpage />} />
             <Route path="/chatbot" element={<Chatbot />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<SignUp />} />
-            <Route path='/reset' element={<Reset />} />
-            <Route path="/chatbot" element={
+            <Route path='therapistlogin' element={<TherapistLogin />} />
+            <Route path='patientlogin' element={<PatientLogin />} />
+
+
+            {/* <Route path='/reset' element={<Reset />} /> */}
+            {/* <Route path="/chatbot" element={
                     <ProtectedRoute>
                         <Chatbot/>
                     </ProtectedRoute>
                 } 
-            />
-            <Route path="/" element={<UserSelection />} />
-            <Route path="/therapist-form" element={<TherapistForm />} />
-            <Route path='/profile' element={<ProfilePage />} />            
+            /> */}
+            <Route  path='/Signup' element={ <Signup />}/>
+            <Route  path='/register/Patient' element={ <PatientReg /> }/>
+            <Route path='register/Therapist'  element={<TherapistReg /> }/>
+            <Route path='/profile' element={<ProfilePage />} />  
+            {/* <Route path='/therapist/Therapistprofile' element={<Therapistprofile />} />   */}
+            <Route path='/Patientprofile' element={<Patientprofile />} />
+            <Route path='/therapistprofile' element={<Therapistprofile />} />       
+       
 
           
         </Routes>

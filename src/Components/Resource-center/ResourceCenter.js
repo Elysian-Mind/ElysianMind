@@ -1,6 +1,8 @@
 import React from 'react'
 import '../Resource-center/ResourceCenter.css'
 import Mentalhealth from "../Assets/mental health.jpg"
+import mentalhealthhiv from '../Assets/mentalhealthhiv.jpg'
+import children from '../Assets/children.jpg'
 
 function ResourceCenter() {
   return (
@@ -30,19 +32,41 @@ function ResourceCenter() {
                 </div>
             </div>
             <div className="card">
-                <img src={Mentalhealth} alt="" />
+                <img src={children} alt="" />
                 <div className="container-text">
-                    <h4>MENTAL HEALTH</h4>
-                    <p>Read about mental health according WHO ...</p>
-                    <button>CHECKOUT</button>
+                    <h4>MENTAL HEALTH IN CHILDREN AND ADOLESCENTS</h4>
+                    <p>Child and Adolescent mental health ...</p>
+                    <a href="https://ijmhs.biomedcentral.com/articles/10.1186/s13033-024-00644-8"
+                    target="_blank"
+                     rel="noopener noreferrer"
+                     style={{
+                            display: 'inline-block',
+                            padding: '20px 100px',
+                            backgroundColor: 'white',
+                            color: '#5598AF',
+                            fontWeight: 'bolder',
+                            textDecoration: 'none',
+                            borderRadius: '5px'
+                         }}>CHECKOUT</a>
                 </div>
             </div>
             <div className="card">
-                <img src={Mentalhealth} alt="" />
+                <img src={mentalhealthhiv} alt="" />
                 <div className="container-text">
-                    <h4>MENTAL HEALTH</h4>
-                    <p>Read about mental health according WHO ...</p>
-                    <button>CHECKOUT</button>
+                    <h4>MENTAL HEALTH AND HIV</h4>
+                    <p> Prevalence of common mental disorder...</p>
+                    <a href="https://ijmhs.biomedcentral.com/articles/10.1186/s13033-024-00641-x"
+                    target="_blank"
+                     rel="noopener noreferrer"
+                     style={{
+                            display: 'inline-block',
+                            padding: '20px 100px',
+                            backgroundColor: 'white',
+                            color: '#5598AF',
+                            fontWeight: 'bolder',
+                            textDecoration: 'none',
+                            borderRadius: '5px'
+                         }}>CHECKOUT</a>
                 </div>
             </div>
             
