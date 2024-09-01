@@ -1,4 +1,4 @@
-import { Password, RollerShades } from '@mui/icons-material';
+// import { Password, RollerShades } from '@mui/icons-material';
 import  { useState } from 'react'
 
 export function useFormState() {
@@ -31,6 +31,16 @@ export function useFormState() {
 
 
     });
+    // const [anonymousFormData, setAnonymousFormData] = useState({
+    //     firstname: 'anonymous',
+    //     lastname: 'anonymous',
+    //     email: 'anonymous',
+    //     age: 'anonymous',
+    //     phone: 'null',
+    //     role: 'anonymous',
+    //     documents: [],
+    //     termsAgreement: false,
+    // })
 
     const handleChange = (e, typeuser) => {
         const {name, value } = e.target;

@@ -85,8 +85,6 @@ Your role is to provide empathetic, supportive, and insightful responses to indi
 Don't hallucinate by giving responses on topics the client hasn't talked about or adding personas that aren't there.
 Context: {context}
 Input: {input}
-
-Response:
 """
 
 try:
