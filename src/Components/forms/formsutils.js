@@ -1,24 +1,34 @@
+import { Password, RollerShades } from '@mui/icons-material';
 import  { useState } from 'react'
 
 export function useFormState() {
     const [therapistFormData, settherapistFormData] = useState({
-       
-        contactPersonName: '',
-        email: '',
+       firstname: '',
+       lastname: '',
+       middlename: '',
+       email: '',
         phone: '',
+        password: '',
         mailingAddress: '',
         previousExperience: '',
         documents: [],
         additionalComments: '',
+        role:'therapist',
         termsAgreement: false,
     })
     const [patientFormData, setPatientFormData] = useState({
         
-        contactPersonName: '',
+        firstname: '',
+        lastname: '',
+        middlename: '',
+        password: '',
         email: '',
         age: '',
         phone: '',
+        role: 'patient',
         documents: [],
+        termsAgreement: false,
+
 
     });
 
