@@ -19,6 +19,8 @@ import { GiWorriedEyes } from "react-icons/gi";
 import { AiFillSchedule } from "react-icons/ai";
 import { IoLibrary } from "react-icons/io5";
 import { FaRobot } from "react-icons/fa";
+import { DateInput } from 'rsuite';
+
 
 
 
@@ -37,7 +39,6 @@ const  Patientprofile = () => {
     // const [searchTerm, setSearchTerm] = useState('');
     // const [therapists, setTherapists] = useState([]);
     // const [loading, setLoading] = useState(false);
-  
 
   useEffect(() => {
     scroller.scrollTo('patientprofile', {
@@ -47,8 +48,22 @@ const  Patientprofile = () => {
     });
   }, []);
 
- 
 
+
+// const setData = (Date, patient_name,appointment_Date  ) => {
+
+  
+
+//  const  booknow = (setData) => {
+//   fetch('http://127.0.0.1:6000/book')
+//     .then(response => response.json())
+//     .then(data => setBookings(data))
+//      console.log(data)
+//     .catch(error => console.log(error));
+
+   
+//  }
+  
   return (
     <div className='patientprofile' id='patientprofile'>
       <div className='card-element'>
@@ -66,166 +81,85 @@ const  Patientprofile = () => {
                   </div>
                   <div className="interests">
 
-                    <h2>Interests</h2>
+                      <h2>Interests</h2>
 
-                    <div className="buttons">
-                      <button>Yoga</button>
-                      <button>AI Doctor</button>
-                      <button>Mental health</button>
-                      <button>Therapists</button>
-                      <button>Communities</button>
-                      <button>Vent</button>
-                    </div>
-
-
+                      <div className="buttons">
+                        <button>Yoga</button>
+                        <button>AI Doctor</button>
+                        <button>Mental health</button>
+                        <button>Therapists</button>
+                        <button>Communities</button>
+                        <button>Vent</button>
+                      </div>
+                    
+                    
                   </div>
-                  <div className="settings">
-                    <p> Settings</p>
-    
-                    <p>
-                      <Link id='log'
-                      to="#"
-                      onClick={() => {
-                          signOut(auth)
-                              .then(() => {
-                                  console.log("user signed out");
-                              })
-                              .catch((error) => {
-                                  console.log("error", error);
-                              });
-                      }}
-                  >
-                      Log out
-                  </Link>
-                   </p>
-                  </div>
+                      <div className="settings">
+                        <p> Settings</p>
+        
+                        <p>
+                          <Link id='log'
+                          to="#"
+                          onClick={() => {
+                              signOut(auth)
+                                  .then(() => {
+                                      console.log("user signed out");
+                                  })
+                                  .catch((error) => {
+                                      console.log("error", error);
+                                  });
+                          }}
+                      >
+                          Log out
+                      </Link>
+                      </p>
+                      </div>
 
 
             </div>
             </div>
             <div className='card-feeling'>
-                <h4>How are you feeling today?</h4>
-                <div className="feelings">
-                  <ul>
-                    <li>
-                      <ImHappy2 />
-                      <span>Happy</span>
-                    </li>
-                    <li>
-                      <RiEmotionUnhappyFill />
-                      <span>Calm</span>
-                    </li>
-                    <li>
-                      <GiPyromaniac />
-                      <span>Manic</span>
-                    </li>
-                    <li>
-                      <GiWorriedEyes />
-                      <span>Angry</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="session">
-                  <p><span>Get 1 on 1 sessions </span>
-                  <br /> <br/>
-                    Let's open up to the things that matter the most
-
-                  </p>
-                  <p id='book'>Book Now <AiFillSchedule /></p>
-                </div>
-                <div className="data">
-                  <button><IoLibrary /> Library</button>
-                  <button><FaRobot/><Link activeClass="active" to="/chatbot">Chatbot</Link></button>
-
-                </div>
-              </div>
-
-          {/* <div className="card">
-            <div className="threads">
-                  
-                <h1>ElysianMind</h1>
-                <button>New Threads</button>
-                <br />
-                <h2>RECENT THREADS</h2>
-                <ul>
-                  <li>#Mental health</li>
-                  <li>#Well being</li>
-                  <li>#heal your mind</li>
-                  <li>#Connect with your soul</li>
-                  <li>#Peaceful mind</li>
-
-                  
-                </ul>
-                </div>
-                <div>
-      <h2>Search Therapists</h2>
-      <input
-        type="text"
-        placeholder="Search by name"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <ul>
-          {therapists.length > 0 ? (
-            therapists.map((therapist) => (
-              <li key={therapist.id}>
-                {therapist.name} - {therapist.specialty}
-              </li>
-            ))
-          ) : (
-            <p>No therapists found.</p>
-          )}
-        </ul>
-      )}
-    </div>
-                <div className="search">
-                  <SearchIcon/> 
-                  <input type="text" />
-                </div>
-
-
-
-                <div className="card-profile" id='card'>
-                  <img src={messageimg} alt="" />
-                  <div className="card-text">
-                    <h4>Getrude Faith</h4>
-                    <p>Hi,are you coming for the session?</p>
-                  </div>
-                  <div className="time">12sec</div>
-                </div>
-                
-                
-                <div className="card-profile" id='card'>
-                    <img src={messageimg} alt="" />
-                    <div className="card-text">
-                      <h4>Getrude Faith</h4>
-                      <p>Hi,are you coming for the session?</p>
+                    <h4>How are you feeling today?</h4>
+                    <div className="feelings">
+                      <ul>
+                        <li>
+                          <ImHappy2 />
+                          <span>Happy</span>
+                        </li>
+                        <li>
+                          <RiEmotionUnhappyFill />
+                          <span>Calm</span>
+                        </li>
+                        <li>
+                          <GiPyromaniac />
+                          <span>Manic</span>
+                        </li>
+                        <li>
+                          <GiWorriedEyes />
+                          <span>Angry</span>
+                        </li>
+                      </ul>
                     </div>
-                    <div className="time">12sec</div>
+                    <div className="session">
+                      <p><span>Get 1 on 1 sessions </span>
+                      <br /> <br/>
+                        Let's open up to the things that matter the most
+
+                      </p>
+                
+
+                      {/* <p id='book'>Book Now <AiFillSchedule /> <DateInput /> </p> */}
+                      
+
+                    </div>
+                      <div className="data">
+                        <button><IoLibrary /> Library</button>
+                        <button><FaRobot/><Link activeClass="active" to="/chatbot">Chatbot</Link></button>
+
+                      </div>
                 </div>
-            </div> */}
-            {/* <div className="card">
-              <Chatbot />
-
-            </div> */}
-
-            
     </div>
-  // fetch('http://127.0.0.1:5000/book')
-  //   .then(response => response.json())
-  //   .then(data => setBookings(data))
-  //    console.log(data)
-  //   .catch(error => console.log(error));
-              
-              
-        
-        
-       
-       
-  )
+   )
 }
 
 

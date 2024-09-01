@@ -15,7 +15,7 @@ const Chatbot = () => {
     setMessages([
       {
         role: 'assistant',
-        content: "Hello, I'm Elysian your AI doctor. How can I help you today?"
+        content: 'Here to help fix your mental health.'
       }
     ]);
   }, []);
