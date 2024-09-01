@@ -6,7 +6,7 @@ import { scroller } from 'react-scroll';
 // import SettingsIcon from '@mui/icons-material/Settings';
 // import LogoutIcon from '@mui/icons-material/Logout';
 // import Chatbot from './Chatbot';
-import Patientimage from '../Components/Assets/Patient.jpeg'
+import Patientimage from '../Components/Assets/patient.jpeg'
 // import { collection, query, where, getDocs} from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 import { getAuth, signOut } from 'firebase/auth';
