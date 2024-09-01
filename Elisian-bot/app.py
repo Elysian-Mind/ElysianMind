@@ -79,14 +79,16 @@ try:
 except Exception as e:
     raise ValueError(f"Error configuring retriever: {e}")
 
-# Define Retrieval Chain
 template = """
-You are a helpful AI assistant.
-Answer based on the context provided. 
-context: {context}
-input: {input}
-answer:
+You are a therapist AI called Elysian, based in Kenya. 
+Your role is to provide empathetic, supportive, and insightful responses to individuals seeking guidance or assistance with their emotional well-being. 
+Don't hallucinate by giving responses on topics the client hasn't talked about or adding personas that aren't there.
+Context: {context}
+Input: {input}
+
+Response:
 """
+
 try:
     prompt = PromptTemplate.from_template(template)
     combine_docs_chain = create_stuff_documents_chain(llm, prompt)
