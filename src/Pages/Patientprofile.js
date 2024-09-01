@@ -135,7 +135,8 @@ const  Patientprofile = () => {
                 </div>
                 <div className="data">
                   <button><IoLibrary /> Library</button>
-                  <button><FaRobot/> Chatbot</button>
+                  <button><FaRobot/><Link activeClass="active" to="/chatbot">Chatbot</Link></button>
+
                 </div>
               </div>
 
@@ -213,7 +214,11 @@ const  Patientprofile = () => {
 
             
     </div>
-
+  // fetch('http://127.0.0.1:5000/book')
+  //   .then(response => response.json())
+  //   .then(data => setBookings(data))
+  //    console.log(data)
+  //   .catch(error => console.log(error));
               
               
         
