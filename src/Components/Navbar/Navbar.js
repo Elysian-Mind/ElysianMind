@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../Assets/logo1.png";
 import "./Navbar.css";
-// import { getAuth, signOut } from "firebase/auth";
-// import Dropdown from 'react-bootstrap/Dropdown';
+
 
 
 function Navbar() {
     const [showMenu, setShowMenu] = useState(false);
-    // const auth = getAuth();
 
     return (
         <nav className="navbar">
@@ -31,7 +29,6 @@ function Navbar() {
                     Home
                 </ScrollLink>
 
-                {/* <Link activeClass="active" to="/authentication" className="listItem customLink">Authenticate</Link> */}
 
                 <ScrollLink
                     activeClass="active"
@@ -55,20 +52,9 @@ function Navbar() {
                 >
                     How We Work
                 </ScrollLink>
-                {/* <ScrollLink
-                    activeClass="active"
-                    to="projects"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    className="desktopMenuListItem"
-                >
-                    Resources
-                </ScrollLink> */}
+                
                 <Link activeClass="active" to="/patient" className="desktopMenuListItem customLink">Patient</Link>
                 <Link activeClass="active" to="/therapist" className="desktopMenuListItem customLink">Therapists</Link>
-                {/* <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link> */}
                 <Link activeClass="active" to="/resource" className="desktopMenuListItem customLink">Resources</Link>
 
                 <Link activeClass="active" to="/patientprofile" className="desktopMenuListItem customLink">Patient Profile</Link>

@@ -1,33 +1,20 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-// import '../../Forms/PatientForms/PatientContact.css'
 import '../PatientForms/PatientContact.css'
-import Checkbox from '@mui/material/Checkbox';
 
 
 
 
 function PatientContact({ formData , handleChange}) {
 
-  // const [checked, setChecked] = React.useState(false);
-
-  // const handleClick = (event) => {
-  //   setChecked(event.target.checked);
-  // };
-
-
-    // const handleFileChange = (e) => {
-    //     const files = Array.from(e.target.files);
-    //     handleChange({target: {name: 'documents', value: files }})
-    //   };
-    
+ 
 
   return (
     <div className='card-contact-patient' id='patient'>
       <div className='patientcontact'>
         <h1>Create an Account: Patient </h1>
         <h2>Fill in Your details</h2>
-        {/* <div className="card"> */}
+        
           <input 
           name="firstname"
           type="text" 
@@ -81,43 +68,7 @@ function PatientContact({ formData , handleChange}) {
               onChange={(e) => handleChange(e, 'Patient')}
               required
               />
-              {/* <div className="check">
-                <label>
-                <Checkbox
-                  checked={checked}
-                  onChange={handleClick}
-                  inputProps={{ 'aria-label': 'controlled' }}
-                />Yoga
-              </label>
-              <label>
-                <Checkbox
-                  checked={checked}
-                  onChange={handleClick}
-                  inputProps={{ 'aria-label': 'controlled' }}
-                />Yoga
-              </label>
-              <label>
-                <Checkbox
-                  checked={checked}
-                  onChange={handleClick}
-                  inputProps={{ 'aria-label': 'controlled' }}
-                />Yoga
-              </label>
-              <label>
-                <Checkbox
-                  checked={checked}
-                  onChange={handleClick}
-                  inputProps={{ 'aria-label': 'controlled' }}
-                />Vent
-              </label>
-              <label>
-                <Checkbox
-                  checked={checked}
-                  onChange={handleClick}
-                  inputProps={{ 'aria-label': 'controlled' }}
-                />Yoga
-              </label>
-              </div> */}
+             
 
               
 

@@ -7,14 +7,7 @@
     margin-top: 200px;
     color: #5598AF;
 }
-.howitworks p{
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    display: flex;
-    margin-top: 15px;
-}
+
 
 .how-it-works {
     height: 100%;
@@ -40,7 +33,7 @@
 }
 .how-it-works .card{
     /* background-color: #E6CB4F; */
-    height: 400px;
+    height: 200px;
     width: 300px;
     background-color: transparent;
     align-items: center;
@@ -60,7 +53,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0px;
+     margin-top: 30px;
     color: black;
     color: #5598AF;
     /* gap: 0.1em; */
@@ -81,14 +74,14 @@
     margin: auto;
     display: flex;
     padding: 5px;
-    width: 300px;
-    height: 70px;
+    width: 250px;
+    height: 60px;
     font-size: 25px;
     font-weight: bold;
     box-shadow: black;
     color: black;
     border: none;
-    border-radius: 40px;
+    border-radius: 10px;
     background-color: #5598AF;
 }
 .howitworks .sign-up{
@@ -114,4 +107,54 @@
     100% {
       transform: scale(1);
     }
+}
+.how-it-works .card svg{
+    font-size: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5598AF;
+    margin-top: 20px;
+
+
+}
+.howitworks .butn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.howitworks .butn #donate{
+    background-color: #E6CB4F;
+    color: white;
+
+}
+.howitworks .butn #sign{
+    background-color: #df3c22;
+    color: white;
+
+}
+.howitworks .butn #sign:hover{
+    background-color: #E6CB4F;
+
+}
+.howitworks .butn #partner{
+    background-color:#E6CB4F;
+    color: white;
+
+}
+.howitworks .butn #partner:hover{
+    background-color: #5598AF;
+}
+
+.howitworks .butn #donate:hover{
+    background-color: #5598AF;
+
+}
+.howitworks button svg{
+    font-size: 30px;
+    padding: 20px;
+    color: white;
 }

@@ -36,21 +36,24 @@ function TherapistLogin() {
     const handleLoginsubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
+        setErrorMessage(null);
+        setSuccessMessage(null);
 
-        // Update formData with the new uid
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            uid: 'uid' // Use the actual UID logic here
-        }));
+        // setFormData((prevFormData) => ({
+        //     ...prevFormData,
+        //     uid: 'uid' 
+        // }));
 
         try {
             if (isForgotPasswordMode) {
                 await handleSendPasswordResetEmail(formData.resetEmail);
                 setSuccessMessage('Password reset email sent successfully!');
             } else {
-                const message = await handleTherapistLogin(formData, navigate); // Pass navigate to handleLogin
+                const message = await handleTherapistLogin(formData); // Pass navigate to handleLogin
                 setSuccessMessage(message);
+                navigate('/therapistprofile')
             }
+
         } catch (error) {
             setErrorMessage(error.message || 'An error occurred');
         } finally {
@@ -101,6 +104,7 @@ function TherapistLogin() {
                                 onChange={handleInputChange}
                                 required
                             />
+                            
                            <p className='visibility' onClick={() => setIsPasswordShown(!isPasswordShown)}>
                                     {isPasswordShown ? <VisibilityOffIcon /> : <VisibilityIcon />}
                                 </p>
@@ -111,14 +115,7 @@ function TherapistLogin() {
                             disabled={isLoading || !formData.email || !formData.password}>
                             {isLoading ? 'Logging You in...' : 'Login'}
                         </button>
-{/* <button type='button' onClick={() => fetchUserType("KsmskadY4Ik9unVNb58e").then((res) => {
-                            console.log ("fetch user success" + res)
-                        }
-                        ).catch((error) =>{
-                            console.log ("not successful" + error)
-                        })
-                        }>Click</button>  */}
-                        
+
                     </div>
                 )}
 

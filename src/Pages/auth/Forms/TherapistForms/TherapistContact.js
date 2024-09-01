@@ -52,7 +52,7 @@ const TherapistContact = ({ formData, handleChange }) => {
       required
       />
 
-  <input name="phone"
+  <input name="password"
       type="password" 
       placeholder='password'
       value={formData.password}
