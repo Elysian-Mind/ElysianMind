@@ -41,7 +41,7 @@ function PatientLogin() {
                 } else {
                     const message = await handlePatientLogin(formData);
                     setSuccessMessage(message);
-                    navigate('/')
+                    navigate('/patientprofile')
                 }
             } catch (error) {
                 setErrorMessage(error.message || 'An error occurred');

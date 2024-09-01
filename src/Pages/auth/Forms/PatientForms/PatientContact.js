@@ -14,7 +14,7 @@ function PatientContact({ formData , handleChange}) {
       <div className='patientcontact'>
         <h1>Create an Account: Patient </h1>
         <h2>Fill in Your details</h2>
-        {/* <div className="card"> */}
+        
           <input 
           name="firstname"
           type="text" 
